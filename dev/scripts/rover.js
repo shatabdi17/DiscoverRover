@@ -46,6 +46,32 @@ rover.parallax = (e) => {
     requestAnimationFrame(app.parallax)
 };
 
+
+// QUOTE FOR BUBBLE STARTS
+
+
+function createTooltip(event) {
+    $('<div class="tooltip"></div>').appendTo('body');
+    positionTooltip(event);
+};
+
+timeoutID = setTimeout(hideBubble, 150);
+
+// function hideBubble() {
+//     clearTimeout(timeoutID);
+//     //--if the mouse isn't on the div then hide the bubble
+//     if (bubbleExists && !onDiv) {
+//         $(".rover").remove();
+//         bubbleExists = false;
+//     }
+// }
+
+// rover.showBubble = function (event) {
+//     if (bubbleExists) {
+//         hideBubble();
+//     } 
+// // QUOTE FOR BUBBLE ENDS
+
 rover.randomNum = () => Math.floor(Math.random()*2);
     
 console.log(rover.randomNum());
@@ -70,6 +96,7 @@ rover.chooseAPI = (num) => {
 rover.eventRoverClick = () => {
     $('.rover-img').on('click', function(){
         rover.chooseAPI(rover.randomNum());
+        rover.showBubble();
     });
 };
 

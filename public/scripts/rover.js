@@ -54,30 +54,7 @@ rover.randomNum = function () {
 
 //console.log(rover.randomNum());
 
-// QUOTE FOR BUBBLE STARTS
 
-
-function createTooltip(event) {
-    $('<div class="tooltip"></div>').appendTo('body');
-    positionTooltip(event);
-};
-
-timeoutID = setTimeout(hideBubble, 150);
-
-// function hideBubble() {
-//     clearTimeout(timeoutID);
-//     //--if the mouse isn't on the div then hide the bubble
-//     if (bubbleExists && !onDiv) {
-//         $(".rover").remove();
-//         bubbleExists = false;
-//     }
-// }
-
-// rover.showBubble = function (event) {
-//     if (bubbleExists) {
-//         hideBubble();
-//     } 
-// // QUOTE FOR BUBBLE ENDS
 
 rover.chooseAPI = function (num) {
     if (num === 0) {
@@ -98,7 +75,7 @@ rover.chooseAPI = function (num) {
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
         rover.chooseAPI(rover.randomNum());
-        rover.showBubble();
+       
     });
 };
 

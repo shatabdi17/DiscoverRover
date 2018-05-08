@@ -137,9 +137,30 @@ html {
   background: peru; }
 
 body {
+  position: relative;
+  height: 100vh; }
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background: url(../assets/mars-background.png);
   background-repeat: repeat-x;
-  bottom: 0; }
+  background-position: bottom;
+  height: 500px;
+  width: 100%;
+  z-index: 4; }
+
+.mountains {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(../assets/mountains.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 30vh;
+  width: 100%;
+  z-index: 3; }
 
 .wrapper {
   width: 70%;

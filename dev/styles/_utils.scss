@@ -9,39 +9,27 @@ $accent: #fcad26;
 $accentDark: #efa424;
 $error: rgba(240, 75, 75, 0.769);
 
-//grid variables
 
-$grid-col-3: 1fr 1fr 1fr;
-$grid-col-1: 1fr;
 
+//z-index positions
+$canvas: 0;
+$space: 1;
+$space-objects: 2;
+$mountains: 3;
+$midground: 4;
+$rover: 5;
+$quotes: 6;
+$foreground: 7;
+$nasaImgs: 8;
 
 //position
 @mixin absolute (){
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
 }
 
-@mixin flex($direction){
-    display: flex;
-    flex-direction: $direction; 
-    flex-wrap: wrap;
-}
 
-//mixins grid layout
-@mixin grid ($column){
-    display: grid;
-    grid-template-columns: $column;
-    grid-gap: 1rem;
-    grid-auto-rows: minmax(10rem auto);
-    grid-auto-columns: minmax(10rem 20rem);
-}
-
-//mixins for text
-@mixin fontSizer($scale) {
-    font-size: $scale * 1px;
-    font-size: ($scale / 10) * 1rem;
-}
 
 @mixin lineHeight($scale) {
     line-height: $scale * 1px;
@@ -82,3 +70,31 @@ $grid-col-1: 1fr;
     padding: $padding;
     margin: $margin;
 }
+
+
+//grid variables
+
+// $grid-col-3: 1fr 1fr 1fr;
+// $grid-col-1: 1fr;
+
+// unused mix-ins
+// @mixin flex($direction){
+//     display: flex;
+//     flex-direction: $direction; 
+//     flex-wrap: wrap;
+// }
+
+// //mixins grid layout
+// @mixin grid ($column){
+//     display: grid;
+//     grid-template-columns: $column;
+//     grid-gap: 1rem;
+//     grid-auto-rows: minmax(10rem auto);
+//     grid-auto-columns: minmax(10rem 20rem);
+// }
+
+// //mixins for text
+// @mixin fontSizer($scale) {
+//     font-size: $scale * 1px;
+//     font-size: ($scale / 10) * 1rem;
+// }

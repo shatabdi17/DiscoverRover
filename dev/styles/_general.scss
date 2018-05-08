@@ -1,7 +1,13 @@
-html body{
-    background: $background;
+html{
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
+    background: peru;
+}
+
+body{
+    background: url(../assets/mars-background.png);
+    background-repeat: repeat-x;
+    bottom: 0;
 }
 
 //------------

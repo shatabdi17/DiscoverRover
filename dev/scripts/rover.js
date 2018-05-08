@@ -31,12 +31,40 @@ rover.getQuote = () => {
         console.log(res);
     });
 }
+//parallax effect for scroll
+    //forground moves faster than background
+
+rover.randomNum = () => Math.floor(Math.random()*2);
+    
+console.log(rover.randomNum());
+
+rover.chooseAPI = (num) => {
+    if(num === 0){
+        console.log('quote');
+        rover.getQuote();
+        //call quote api 
+    //display bubble above the rover
+    //make quote last 5 seconds and then disappear
+    }else{
+        console.log('nasa');
+        
+        //call nasa api
+    // display full image 
+    //include exit button to close image
+    }
+}
 
 
+rover.eventRoverClick = () => {
+    $('.rover-img').on('click', function(){
+        rover.chooseAPI(rover.randomNum());
+    });
+};
 
 rover.init = () => {
+    rover.eventRoverClick();
+    //nasa called in init because it takes awhile to load and only needs to be called once
     rover.getNasa();
-    rover.getQuote();
 };
 
 

@@ -3,13 +3,30 @@ html{
     font-size: 62.5%;
     background: peru;
 }
-
 body{
-    background: url(../assets/mars-background.png);
-    background-repeat: repeat-x;
-    bottom: 0;
+    position: relative;
+    height: 100vh;
 }
 
+.ground{
+    @include absolute();
+    background: url(../assets/mars-background.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 500px;
+    width: 100%;
+    z-index: $midground;
+}
+
+.mountains{
+    @include absolute();
+    background: url(../assets/mountains.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 30vh;
+    width: 100%;
+    z-index: $mountains;
+}
 //------------
 //page layout
 //------------

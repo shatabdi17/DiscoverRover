@@ -34,6 +34,18 @@ rover.getQuote = () => {
 //parallax effect for scroll
     //forground moves faster than background
 
+rover.setTranslate = (xPos, yPos, el) => {
+    el.css('transform', `translate3d(${xPos}, ${yPos}px, 0`)
+}
+rover.parallax = (e) => {
+    const $mountain = $('.mountains');
+    const $ground = $('.ground'); 
+    let scrollPositionX = window.scrollX;
+    app.setTranslate( scrollPositionX, 0 * -0.3, $mountain);
+    app.setTranslate( scrollPositionX, 0 * -0.15, $ground);
+    requestAnimationFrame(app.parallax)
+};
+
 rover.randomNum = () => Math.floor(Math.random()*2);
     
 console.log(rover.randomNum());

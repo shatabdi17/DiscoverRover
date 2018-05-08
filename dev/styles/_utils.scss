@@ -1,0 +1,84 @@
+//color variables
+$background: #F7FDFF;//primary
+$beige: #F7F7F7;//secondary
+$beigeTransparent: rgba(247, 247, 247, 0.70);//secondary
+$backgroundTransparent: rgba(247, 253, 255, 0.85);
+$white: #FFF;
+$black: #3A3A3A;
+$accent: #fcad26;
+$accentDark: #efa424;
+$error: rgba(240, 75, 75, 0.769);
+
+//grid variables
+
+$grid-col-3: 1fr 1fr 1fr;
+$grid-col-1: 1fr;
+
+
+//position
+@mixin absolute (){
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction; 
+    flex-wrap: wrap;
+}
+
+//mixins grid layout
+@mixin grid ($column){
+    display: grid;
+    grid-template-columns: $column;
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(10rem auto);
+    grid-auto-columns: minmax(10rem 20rem);
+}
+
+//mixins for text
+@mixin fontSizer($scale) {
+    font-size: $scale * 1px;
+    font-size: ($scale / 10) * 1rem;
+}
+
+@mixin lineHeight($scale) {
+    line-height: $scale * 1px;
+    line-height: ($scale / 10) * 1rem;
+}
+
+@mixin font($size){
+    @include fontSizer($size);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $black;
+    text-shadow: 0 0 1.5rem $background;
+}
+
+//parallax
+@mixin parallax($url, $width, $height, $z-index, $top, $left, $opacity){
+    background-image: url($url);
+    width: $width;
+    height: $height;
+    position: fixed;
+    background-repeat: no-repeat;
+    z-index: $z-index;
+    background-position: center center;
+    top: $top;
+    left: $left;
+    opacity: $opacity;
+}
+
+//animation
+@mixin animation($delay){
+    animation-name: play30;
+    animation-iteration-count: infinite;
+    animation-delay: $delay;
+}
+
+//padding and margin
+@mixin spacing($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}

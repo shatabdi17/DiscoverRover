@@ -23,13 +23,17 @@ $foreground: 7;
 $nasaImgs: 8;
 
 //position
-@mixin absolute (){
-    position: absolute;
+@mixin fixed (){
+    position: fixed;
     bottom: 0;
     left: 0;
 }
 
-
+//mixins for text
+@mixin fontSizer($scale) {
+    font-size: $scale * 1px;
+    font-size: ($scale / 10) * 1rem;
+}
 
 @mixin lineHeight($scale) {
     line-height: $scale * 1px;
@@ -93,8 +97,3 @@ $nasaImgs: 8;
 //     grid-auto-columns: minmax(10rem 20rem);
 // }
 
-// //mixins for text
-// @mixin fontSizer($scale) {
-//     font-size: $scale * 1px;
-//     font-size: ($scale / 10) * 1rem;
-// }

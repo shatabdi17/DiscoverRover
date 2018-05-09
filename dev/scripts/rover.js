@@ -56,10 +56,10 @@ rover.scroll = () => {
 //     }
 // }
 
-// rover.showBubble = function (event) {
-//     if (bubbleExists) {
-//         hideBubble();
-//     } 
+rover.showBubble = function (event) {
+    if (bubbleExists) {
+        hideBubble();
+    } 
 // // QUOTE FOR BUBBLE ENDS
 
 rover.randomNum = () => Math.floor(Math.random()*2);

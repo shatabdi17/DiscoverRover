@@ -16,17 +16,7 @@ body{
     background-position: center;
     //background-position: cover;
 }
-// .mountains3{
-//     @include fixed();
-//     background: url(../assets/mountain3.png);
-//     background-repeat: repeat-x;
-//     background-position: bottom;
-//     height: 1000px;
-//     width: 1000px;
-//     overflow: hidden;
-//     z-index: $mountains;
-//     bottom: -500px;
-// }
+
 .mountains2{
     @include fixed();
     background: url(../assets/mountain2.png);
@@ -45,7 +35,7 @@ body{
     background-repeat: repeat-x;
     background-position: bottom;
     height: 2000px;
-    width: 2000px;
+    width: 4000px;
     overflow: hidden;
     z-index: $mountains;
     bottom: -200px;
@@ -60,6 +50,7 @@ body{
     width: 20000px;
     overflow: hidden;
     z-index: $midground;
+    bottom: 50px;
 }
 .foreground{
     @include fixed();

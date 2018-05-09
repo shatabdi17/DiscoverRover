@@ -5,16 +5,18 @@ var rover = {};
 rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 
 rover.getNasa = function () {
-    $.ajax({
-        url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?',
+    return $.ajax({
+        url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos',
         method: 'GET',
         dataType: 'json',
         data: {
             sol: '1000',
-            api_key: rover.roverApiKey
+            api_key: rover.roverApiKey,
+            page: '1',
+            camera: 'NAVCAM'
         }
     }).then(function (res) {
-        console.log(res);
+        console.log(res.photos);
     });
 };
 
@@ -34,6 +36,7 @@ rover.getQuote = function () {
     });
 };
 
+//parallax effect
 rover.scroll = function () {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
@@ -63,11 +66,9 @@ rover.scroll = function () {
 //     } 
 // // QUOTE FOR BUBBLE ENDS
 
-rover.randomNum = function () {
-    return Math.floor(Math.random() * 2);
+rover.randomNum = function (max) {
+    return Math.floor(Math.random() * max);
 };
-
-console.log(rover.randomNum());
 
 rover.chooseAPI = function (num) {
     if (num === 0) {
@@ -87,7 +88,7 @@ rover.chooseAPI = function (num) {
 
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
-        rover.chooseAPI(rover.randomNum());
+        rover.chooseAPI(rover.randomNum(2));
         rover.showBubble();
     });
 };
@@ -97,7 +98,7 @@ rover.init = function () {
     rover.scroll();
     rover.eventRoverClick();
     //nasa called in init because it takes awhile to load and only needs to be called once
-    rover.getNasa();
+    console.log(rover.getNasa());
 };
 
 $(rover.init());

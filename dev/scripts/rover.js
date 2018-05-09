@@ -59,10 +59,6 @@ rover.scroll = () => {
 //     }
 // }
 
-// rover.showBubble = function (event) {
-//     if (bubbleExists) {
-//         hideBubble();
-//     } 
 // // QUOTE FOR BUBBLE ENDS
 
 rover.randomNum = (max) => Math.floor(Math.random()*max);

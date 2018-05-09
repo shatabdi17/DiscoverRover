@@ -107,9 +107,28 @@ h3{
 
 
 //------
-//header
+//quote
 //------
 
+.quote {
+    width:400px;
+    height: auto;
+    position: relative;
+    top: 250px;
+    color: $black;
+    background: $backgroundTransparent;
+    left: 400px;
+    border-radius: 7px;
+    padding: 20px;
+    q {
+        font-size: 25px;
+    }
+    p {
+        font-size: 16px;
+        text-align: right;
+        padding-top: 20px;
+    }
+}
 //----------------
 //parallax stuffs
 //----------------

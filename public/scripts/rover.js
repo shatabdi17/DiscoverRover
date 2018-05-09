@@ -71,6 +71,8 @@ rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
     var quoteAuthor = quote.quoteAuthor;
     console.log(quoteText, quoteAuthor);
+    var quoteContainer = $('.quote');
+    quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
 };
 
 // rover.chooseAPI = (num) => {

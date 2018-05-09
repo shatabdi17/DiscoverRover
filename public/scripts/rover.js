@@ -60,10 +60,6 @@ rover.scroll = function () {
 //     }
 // }
 
-// rover.showBubble = function (event) {
-//     if (bubbleExists) {
-//         hideBubble();
-//     } 
 // // QUOTE FOR BUBBLE ENDS
 
 rover.randomNum = function (max) {

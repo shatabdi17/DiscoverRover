@@ -170,7 +170,7 @@ body {
   background-repeat: repeat-x;
   background-position: bottom;
   height: 2000px;
-  width: 2000px;
+  width: 4000px;
   overflow: hidden;
   z-index: 3;
   bottom: -200px; }
@@ -185,7 +185,8 @@ body {
   height: 239px;
   width: 20000px;
   overflow: hidden;
-  z-index: 4; }
+  z-index: 4;
+  bottom: 50px; }
 
 .foreground {
   position: fixed;

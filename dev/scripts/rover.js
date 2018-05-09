@@ -31,31 +31,21 @@ rover.getQuote = () => {
         console.log(res);
     });
 }
-//parallax effect for scroll
-    //forground moves faster than background
 
-rover.setTranslate = (xPos, yPos, el) => {
-    el.css('transform', `translate3d(${xPos}, ${yPos}px, 0`)
-}
-rover.parallax = (e) => {
-    const $mountain = $('.mountains');
-    const $ground = $('.ground'); 
-    let scrollPositionX = window.scrollX;
-    app.setTranslate( scrollPositionX, 0 * -0.3, $mountain);
-    app.setTranslate( scrollPositionX, 0 * -0.15, $ground);
-    requestAnimationFrame(app.parallax)
+rover.scroll = () => {
+    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
+    
 };
-
 
 // QUOTE FOR BUBBLE STARTS
 
 
-function createTooltip(event) {
-    $('<div class="tooltip"></div>').appendTo('body');
-    positionTooltip(event);
-};
+// function createTooltip(event) {
+//     $('<div class="tooltip"></div>').appendTo('body');
+//     positionTooltip(event);
+// };
 
-timeoutID = setTimeout(hideBubble, 150);
+// timeoutID = setTimeout(hideBubble, 150);
 
 // function hideBubble() {
 //     clearTimeout(timeoutID);
@@ -101,6 +91,8 @@ rover.eventRoverClick = () => {
 };
 
 rover.init = () => {
+    //rover.parallax();
+    rover.scroll();
     rover.eventRoverClick();
     //nasa called in init because it takes awhile to load and only needs to be called once
     rover.getNasa();

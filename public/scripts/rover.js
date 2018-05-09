@@ -33,28 +33,41 @@ rover.getQuote = function () {
         console.log(res);
     });
 };
-//parallax effect for scroll
-//forground moves faster than background
 
-rover.setTranslate = function (xPos, yPos, el) {
-    el.css('transform', 'translate3d(' + xPos + ', ' + yPos + 'px, 0');
+rover.scroll = function () {
+    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
-rover.parallax = function (e) {
-    var $mountain = $('.mountains');
-    var $ground = $('.ground');
-    var scrollPositionX = window.scrollX;
-    app.setTranslate(scrollPositionX, 0 * -0.3, $mountain);
-    app.setTranslate(scrollPositionX, 0 * -0.15, $ground);
-    requestAnimationFrame(app.parallax);
-};
+
+// QUOTE FOR BUBBLE STARTS
+
+
+// function createTooltip(event) {
+//     $('<div class="tooltip"></div>').appendTo('body');
+//     positionTooltip(event);
+// };
+
+// timeoutID = setTimeout(hideBubble, 150);
+
+// function hideBubble() {
+//     clearTimeout(timeoutID);
+//     //--if the mouse isn't on the div then hide the bubble
+//     if (bubbleExists && !onDiv) {
+//         $(".rover").remove();
+//         bubbleExists = false;
+//     }
+// }
+
+// rover.showBubble = function (event) {
+//     if (bubbleExists) {
+//         hideBubble();
+//     } 
+// // QUOTE FOR BUBBLE ENDS
 
 rover.randomNum = function () {
     return Math.floor(Math.random() * 2);
 };
 
-//console.log(rover.randomNum());
-
-
+console.log(rover.randomNum());
 
 rover.chooseAPI = function (num) {
     if (num === 0) {
@@ -64,7 +77,7 @@ rover.chooseAPI = function (num) {
         //display bubble above the rover
         //make quote last 5 seconds and then disappear
     } else {
-      //  console.log('nasa');
+        console.log('nasa');
 
         //call nasa api
         // display full image 
@@ -75,11 +88,13 @@ rover.chooseAPI = function (num) {
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
         rover.chooseAPI(rover.randomNum());
-       
+        rover.showBubble();
     });
 };
 
 rover.init = function () {
+    //rover.parallax();
+    rover.scroll();
     rover.eventRoverClick();
     //nasa called in init because it takes awhile to load and only needs to be called once
     rover.getNasa();

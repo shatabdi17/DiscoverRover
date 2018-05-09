@@ -16,7 +16,7 @@ rover.getNasa = function () {
             camera: 'NAVCAM'
         }
     }).then(function (res) {
-        //console.log(res.photos);
+        rover.displayNasaImg(res.photos);
     });
 };
 
@@ -32,7 +32,6 @@ rover.getQuote = function () {
             format: "jsonp"
         }
     }).then(function (res) {
-        console.log(res);
         rover.displayQuote(res);
     });
 };
@@ -70,9 +69,19 @@ rover.randomNum = function (max) {
 rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
     var quoteAuthor = quote.quoteAuthor;
+
     console.log(quoteText, quoteAuthor);
     var quoteContainer = $('.quote');
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
+
+    //console.log(quoteText, quoteAuthor);
+};
+
+rover.displayNasaImg = function (roverImgs) {
+    var randomIndex = rover.randomNum(roverImgs.length);
+    var imgChoice = roverImgs[randomIndex].img_src;
+    console.log(imgChoice);
+
 };
 
 // rover.chooseAPI = (num) => {
@@ -94,7 +103,7 @@ rover.displayQuote = function (quote) {
 
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
-        rover.chooseAPI(rover.randomNum(2));
+        rover.getNasa();
     });
 };
 

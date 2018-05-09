@@ -14,7 +14,7 @@ rover.getNasa = () => {
             camera: 'NAVCAM'
         }
     }).then((res) => {
-        //console.log(res.photos);
+        rover.displayNasaImg(res.photos);
     });
 };
 
@@ -30,7 +30,6 @@ rover.getQuote = () => {
             format: "jsonp"
         },
     }).then((res) => {
-        console.log(res);
         rover.displayQuote(res);
     });
 };
@@ -72,9 +71,15 @@ rover.displayQuote = (quote) => {
     const quoteContainer = $('.quote');
     quoteContainer.append(`<q>${quoteText}</q> 
                         <p>${quoteAuthor}</p>`);
+    //console.log(quoteText, quoteAuthor);
 };
 
-
+rover.displayNasaImg = (roverImgs) => {
+    let randomIndex = rover.randomNum(roverImgs.length);
+    const imgChoice = roverImgs[randomIndex].img_src;
+    console.log(imgChoice);
+    
+}
 
 
 
@@ -97,8 +102,7 @@ rover.displayQuote = (quote) => {
 
 rover.eventRoverClick = () => {
     $('.rover-img').on('click', function(){
-        rover.chooseAPI(rover.randomNum(2));
-        
+        rover.getNasa();
     });
 };
 

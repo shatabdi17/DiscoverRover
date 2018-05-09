@@ -14,7 +14,7 @@ rover.getNasa = () => {
             camera: 'NAVCAM'
         }
     }).then((res) => {
-        console.log(res.photos);
+        rover.displayNasaImg(res.photos);
     });
 };
 
@@ -30,7 +30,7 @@ rover.getQuote = () => {
             format: "jsonp"
         },
     }).then((res) => {
-        console.log(res);
+        rover.displayQuote(res);
     });
 };
 
@@ -64,6 +64,21 @@ rover.scroll = () => {
 rover.randomNum = (max) => Math.floor(Math.random()*max);
     
 
+rover.displayQuote = (quote) => {
+    const quoteText = quote.quoteText;
+    const quoteAuthor = quote.quoteAuthor;
+    //console.log(quoteText, quoteAuthor);
+};
+
+rover.displayNasaImg = (roverImgs) => {
+    let randomIndex = rover.randomNum(roverImgs.length);
+    const imgChoice = roverImgs[randomIndex].img_src;
+    console.log(imgChoice);
+    
+}
+
+
+
 // rover.chooseAPI = (num) => {
 //     if(num === 0){
 //         console.log('quote');
@@ -83,8 +98,7 @@ rover.randomNum = (max) => Math.floor(Math.random()*max);
 
 rover.eventRoverClick = () => {
     $('.rover-img').on('click', function(){
-        rover.chooseAPI(rover.randomNum(2));
-        rover.showBubble();
+        rover.getNasa();
     });
 };
 
@@ -94,6 +108,7 @@ rover.init = () => {
     rover.eventRoverClick();
     //nasa called in init because it takes awhile to load and only needs to be called once
     //console.log(rover.getNasa());
+    rover.getQuote();
 };
 
 

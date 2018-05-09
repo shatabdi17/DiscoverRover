@@ -64,21 +64,21 @@ rover.scroll = () => {
 rover.randomNum = (max) => Math.floor(Math.random()*max);
     
 
-rover.chooseAPI = (num) => {
-    if(num === 0){
-        console.log('quote');
-        rover.getQuote();
-        //call quote api 
-    //display bubble above the rover
-    //make quote last 5 seconds and then disappear
-    }else{
-        console.log('nasa');
+// rover.chooseAPI = (num) => {
+//     if(num === 0){
+//         console.log('quote');
+//         rover.getQuote();
+//         //call quote api 
+//     //display bubble above the rover
+//     //make quote last 5 seconds and then disappear
+//     }else{
+//         console.log('nasa');
         
-        //call nasa api
-    // display full image 
-    //include exit button to close image
-    }
-}
+//         //call nasa api
+//     // display full image 
+//     //include exit button to close image
+//     }
+// }
 
 
 rover.eventRoverClick = () => {
@@ -93,7 +93,7 @@ rover.init = () => {
     rover.scroll();
     rover.eventRoverClick();
     //nasa called in init because it takes awhile to load and only needs to be called once
-    console.log(rover.getNasa());
+    //console.log(rover.getNasa());
 };
 
 

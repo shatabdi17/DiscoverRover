@@ -245,3 +245,20 @@ h3 {
   color: #3A3A3A;
   text-shadow: 0 0 1.5rem #F7FDFF;
   color: #efa424; }
+
+.quote {
+  width: 400px;
+  height: auto;
+  position: relative;
+  top: 250px;
+  color: #3A3A3A;
+  background: rgba(247, 253, 255, 0.85);
+  left: 400px;
+  border-radius: 7px;
+  padding: 20px; }
+  .quote q {
+    font-size: 25px; }
+  .quote p {
+    font-size: 16px;
+    text-align: right;
+    padding-top: 20px; }

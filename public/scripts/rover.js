@@ -69,6 +69,11 @@ rover.randomNum = function (max) {
 rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
     var quoteAuthor = quote.quoteAuthor;
+
+    console.log(quoteText, quoteAuthor);
+    var quoteContainer = $('.quote');
+    quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
+
     //console.log(quoteText, quoteAuthor);
 };
 
@@ -76,6 +81,7 @@ rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
     var imgChoice = roverImgs[randomIndex].img_src;
     console.log(imgChoice);
+
 };
 
 // rover.chooseAPI = (num) => {

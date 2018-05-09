@@ -67,6 +67,10 @@ rover.randomNum = (max) => Math.floor(Math.random()*max);
 rover.displayQuote = (quote) => {
     const quoteText = quote.quoteText;
     const quoteAuthor = quote.quoteAuthor;
+    console.log(quoteText, quoteAuthor);
+    const quoteContainer = $('.quote');
+    quoteContainer.append(`<q>${quoteText}</q> 
+                        <p>${quoteAuthor}</p>`);
     //console.log(quoteText, quoteAuthor);
 };
 

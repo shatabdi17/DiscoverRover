@@ -61,6 +61,8 @@ rover.displayQuote = function (quote) {
     var quoteAuthor = quote.quoteAuthor;
 
 
+
+
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
@@ -103,6 +105,7 @@ rover.displayNasaImg = function (roverImgs) {
 
     var imageContainer = $('.nasa-image');
     imageContainer.append('<img src="' + imgChoice + '">)');
+
 };
 
 rover.eventRoverClick = function () {

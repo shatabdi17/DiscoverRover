@@ -1,5 +1,11 @@
 .hide{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
 }
 
 html{
@@ -8,30 +14,22 @@ html{
     width: 100%;
     height: 100%;
     background: $darkBlue;
+    body{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 1px;
+        background: linear-gradient($darkOrange, $darkBlue);
+    }
 }
-body{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 1px;
-    background: linear-gradient($darkOrange, $darkBlue);
-}
-
-//-----------
-// intro page
-//-----------
-.intro{
-    background: url(/public/assets/sunset-cropped.jpg);
-    width: 100%;
-    height: 100%;
-}
-
 canvas{
     width: 100vw;
     height: 100vh;
     @include fixed();
 }
-
+//-----------
+// intro page
+//-----------
 .intro-container {
     background:$darkBlue;
     position: fixed;
@@ -41,7 +39,6 @@ canvas{
     align-items: center;
     height:100vh;
     width: 100%;   
-   
 }
 .select-rover {
     color: $white;
@@ -110,16 +107,13 @@ canvas{
     display: flex;
     justify-content: center;
     align-items: center;
-   // background: $backgroundTransparent;
-     
+    position: fixed;
+    z-index: $nasaImgs;
 }
 
 
 .nasa-image > img {
-    z-index: 99999;
-    position: fixed;     
     margin:auto;
-    top: 100px;  
     border: 12px solid $white;
     border-radius:7px;
     width: 800px;
@@ -140,6 +134,7 @@ canvas{
     height: 40px;
     text-align: center;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 

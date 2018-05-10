@@ -39,18 +39,9 @@ rover.getQuote = function () {
     });
 };
 
-//---------------
-//hiding intro-container
-//---------------
-
-// rover.hideIntroContainer = () => {
-// $('.main-container').hide();
-// $('.rover-select-button').on('submit', function() {
-//     $(".intro-container").hide();
-//     $('.main-container').show();
-//     }
-// };
-
+//-------
+// intro
+//-------
 rover.hideIntroContainer = function () {
     var intro = $('.intro-container');
     var main = $('.main-container');
@@ -63,6 +54,9 @@ rover.hideIntroContainer = function () {
         main.show();
     });
 };
+
+rover.introSubmit = function () {};
+
 //---------------
 //parallax effect
 //---------------
@@ -84,7 +78,6 @@ rover.displayQuote = function (quote) {
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
-    //console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = function () {
@@ -98,15 +91,20 @@ rover.quoteDisplayTimer = function () {
 //-------
 // Nasa 
 //-------
+rover.imgContainer = $('.nasa-image');
+
 rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
     var imgChoice = roverImgs[randomIndex].img_src;
-    // imgChoice.css('height', '500px');
+    rover.imgContainer.addClass('show');
+    rover.imgContainer.removeClass('hide');
     console.log(imgChoice);
+
     var imageContainer = $('.nasa-image');
 
     imageContainer.empty();
-    imageContainer.append('<img src="' + imgChoice + '"> \n                           <span class="close-button">&#x2715</span>');
+    rover.imgContainer.html('<img src="' + imgChoice + '">\n        <span class="close-button">&#x2715</span>');
+
 };
 
 rover.eventRoverClick = function () {
@@ -118,7 +116,8 @@ rover.eventRoverClick = function () {
 rover.eventCloseClick = function () {
     var nasaImgContainer = $('.nasa-image');
     nasaImgContainer.on('click', '.close-button', function () {
-        nasaImgContainer.empty();
+        rover.imgContainer.addClass('hide');
+        rover.imgContainer.removeClass('show');
     });
 };
 

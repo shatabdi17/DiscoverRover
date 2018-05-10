@@ -9,6 +9,8 @@
 	<title>Discover Rover</title>
 	<!--Load animate.css-->
 	<link rel="stylesheet" href="/public/styles/animate.css">
+	<!--Load AOS.css-->
+	<link rel="stylesheet" href="/public/styles/aos.css">
 	<!--Load google fonts-->
 	
 	<!--Link to stylesheet-->
@@ -16,8 +18,20 @@
 
 </head>
 <body>
+	<header>
+		<section class="intro">
+			<h1>Select Your Rover</h1>
+			<form action="">
+				<select name="chooseRover" id="chooseRover">
+					<option value="curiousity">Curiousity</option>
+					<option value="opportunity">Opportunity</option>
+					<option value="spirit">Spirit</option>
+				</select>
+				<input type="submit" value="Choose Your Companion">
+			</form>
+		</section>
+	</header>
 	<main>
-		
 		<div class="sky">
 			<div class="mountains2"></div>
 			<div class="mountains1"></div>
@@ -32,8 +46,12 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
 		
 		
+=======
+		<div class="quote hide"></div>
+>>>>>>> 2009626edf4cbaacc3c3981d76e320f0fb334b1b
 		<!-- <div class="social-btn">
 			 twitter 
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Took a quiz and found my new accent! Find your&#39;s at Be Accellent!"
@@ -58,6 +76,7 @@
 			<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
 			<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 		</div> -->
+		<!-- <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Designed by Freepik</a> -->
 
 	</main>
 <!-- jquery -->
@@ -67,6 +86,8 @@
 	<script src="public/scripts/library/anime.min.js"></script>
 	<!-- invert scroll.js -->
 	<script src="public/scripts/library/jquery.jInvertScroll.js"></script>
+	<!-- invert AOS.js -->
+	<script src="public/scripts/library/aos.js"></script>
 	<!-- font awesome -->
 	<script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous'></script>	
 	<!-- q-tip -->

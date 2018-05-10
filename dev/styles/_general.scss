@@ -32,20 +32,42 @@ canvas{
 //-----------
 .intro-container {
     background:$darkBlue;
-    position: relative;
+    position: fixed;
     z-index: 9000;
     display: flex;
     justify-content: center;
     align-items: center;
     height:100vh;
-    //transform: translateY(50%);
+    width: 100%;   
 }
 .select-rover {
     color: $white;
     font-size:40px;
+    display: block;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    padding-bottom: 20px;
+}
+.rover-selection-container {
+    padding: 40px 80px;
+    font-size: 20px;
+    border: none;
 }
 
-.sand{
+.rover-select-button {
+    font-size:18px;
+    padding: 10px;
+    border-radius: 7px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+    border: none;
+    &:hover {
+        color: $white;
+        background: black;
+    }
+}
+
+.sand {
     @include fixed();
     background: url(../assets/mars-bg.svg);
     background-repeat: repeat-x;
@@ -87,7 +109,6 @@ canvas{
     align-items: center;
     position: fixed;
     z-index: $nasaImgs;
-   // background: $backgroundTransparent;
 }
 
 
@@ -97,7 +118,8 @@ canvas{
     border-radius:7px;
     width: 800px;
     height:500px;
-    position: relative;
+     position: relative;
+   
 }
 .close-button {
     color: $black;
@@ -105,7 +127,7 @@ canvas{
     font-weight: bold;
     position: absolute;
     right: 300px;
-    top: 105px;
+    top: 90px;
     z-index: 9999999;
     background: $white;
     width: 40px;

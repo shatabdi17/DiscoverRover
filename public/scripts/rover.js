@@ -78,7 +78,6 @@ rover.displayQuote = function (quote) {
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
-    //console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = function () {
@@ -100,7 +99,12 @@ rover.displayNasaImg = function (roverImgs) {
     rover.imgContainer.addClass('show');
     rover.imgContainer.removeClass('hide');
     console.log(imgChoice);
+
+    var imageContainer = $('.nasa-image');
+
+    imageContainer.empty();
     rover.imgContainer.html('<img src="' + imgChoice + '">\n        <span class="close-button">&#x2715</span>');
+
 };
 
 rover.eventRoverClick = function () {

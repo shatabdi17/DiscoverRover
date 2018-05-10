@@ -90,27 +90,10 @@ rover.displayQuote = function (quote) {
 rover.quoteDisplayTimer = function () {
     setInterval(function () {
         rover.getQuote();
-    }, 10000);
-};
-
-//HELP CUE!!!!!!!!
-//NEED PROMISE
-rover.toggleQuoteDisplayTimer = function () {
-    setInterval(function () {
         var quoteContainer = $('.quote');
         quoteContainer.toggle('.hide');
     }, 10000);
 };
-
-// $.when(jokeOne, jokeTwo)
-//     .then((resOne, resTwo) => {
-//         //returns array
-//         console.log(resOne, resTwo)
-//         console.log(resOne[0], resTwo[0])
-//     })
-//     .fail((err) => {
-//         console.log(err);
-//     });
 
 //-------
 // Nasa 
@@ -121,6 +104,7 @@ rover.displayNasaImg = function (roverImgs) {
     // imgChoice.css('height', '500px');
     console.log(imgChoice);
     var imageContainer = $('.nasa-image');
+
     imageContainer.empty();
     imageContainer.append('<img src="' + imgChoice + '">)');
     imageContainer.append('<span class="close-button">&#x2715</span>');
@@ -132,6 +116,13 @@ rover.eventRoverClick = function () {
     });
 };
 
+rover.eventCloseClick = function () {
+    var nasaImgContainer = $('.nasa-image');
+    nasaImgContainer.on('click', '.close-button', function () {
+        nasaImgContainer.empty();
+    });
+};
+
 rover.init = function () {
     // hiding the intro container
     rover.hideIntroContainer();
@@ -139,9 +130,10 @@ rover.init = function () {
     rover.scroll();
     //start timer to display quote
     rover.quoteDisplayTimer();
-    rover.toggleQuoteDisplayTimer();
     //click rover to get NASA imgs
     rover.eventRoverClick();
+    //click to close NASA imgs
+    rover.eventCloseClick();
 };
 
 $(rover.init());

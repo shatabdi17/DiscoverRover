@@ -1,3 +1,7 @@
+.hide{
+    display: none;
+}
+
 html{
     font-family: 'Montserrat', sans-serif;
     font-size: 62.5%;
@@ -71,10 +75,6 @@ body{
     bottom: 160px;
     z-index: $rover;
 }
-//------------
-//page layout
-//------------
-
 
 //--------------
 //styling fonts
@@ -100,6 +100,10 @@ h3{
     @include font(15);
     color: $accentDark;
 }
+//------------
+//Int layout
+//------------
+
 
 //------------------------------------
 //styling radio buttons and img labels
@@ -128,6 +132,15 @@ h3{
         text-align: right;
         padding-top: 20px;
     }
+}
+
+.quote::after{
+    content: '';
+    border-top: 20px solid $backgroundTransparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: fixed;
+
 }
 //----------------
 //parallax stuffs

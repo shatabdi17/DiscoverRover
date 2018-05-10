@@ -6,22 +6,17 @@ $backgroundTransparent: rgba(247, 253, 255, 0.85);
 $white: #FFF;
 $black: #3A3A3A;
 $accent: #fcad26;
-$accentDark: #efa424;
-$error: rgba(240, 75, 75, 0.769);
+$darkOrange: rgb(199, 110, 0);
 $darkBlue: #000080;
 
 
 
 //z-index positions
-$canvas: 0;
-$space: 1;
-$space-objects: 2;
-$mountains: 3;
-$midground: 4;
-$rover: 5;
-$quotes: 6;
-$foreground: 7;
-$nasaImgs: 8;
+$background: 1;
+$midground: 2;
+$rover: 3;
+$quotes: 4;
+$nasaImgs: 5;
 
 //position
 @mixin fixed (){

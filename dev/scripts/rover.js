@@ -36,6 +36,31 @@ rover.getQuote = () => {
         rover.displayQuote(res);
     });
 };
+
+//---------------
+//hiding intro-container
+//---------------
+
+// rover.hideIntroContainer = () => {
+// $('.main-container').hide();
+// $('.rover-select-button').on('submit', function() {
+//     $(".intro-container").hide();
+//     $('.main-container').show();
+//     }
+// };
+
+rover.hideIntroContainer = () => {
+    const intro = $('.intro-container');
+    const main = $('.main-container');
+    //main.hide();
+    const form = $('form')
+    form.on('submit', (e) => {
+        e.preventDefault();
+        console.log('form submitted');
+        // intro.hide();
+         main.show();
+    });
+};
 //---------------
 //parallax effect
 //---------------
@@ -45,7 +70,7 @@ rover.scroll = () => {
 
 
 //random number generator 
-rover.randomNum = (max) => Math.floor(Math.random()*max);
+rover.randomNum = (max) => Math.floor(Math.random()* max);
 
 //------
 //Quote
@@ -94,6 +119,7 @@ rover.displayNasaImg = (roverImgs) => {
     // imgChoice.css('height', '500px');
     console.log(imgChoice);
     const imageContainer = $('.nasa-image');
+    imageContainer.empty();
     imageContainer.append(`<img src="${imgChoice}">)`);
     imageContainer.append(`<span class="close-button">&#x2715</span>`)
 }
@@ -106,6 +132,8 @@ rover.eventRoverClick = () => {
 };
 
 rover.init = () => {
+    // hiding the intro container
+    rover.hideIntroContainer();
     //start inverted parallax scroll
     rover.scroll();
     //start timer to display quote

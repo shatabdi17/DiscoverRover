@@ -153,6 +153,24 @@ canvas {
   bottom: 0;
   left: 0; }
 
+.intro-container {
+  background: #000080;
+  position: relative;
+  z-index: 9000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.select-rover {
+  color: #FFF;
+  font-size: 40px; }
+
 .sand {
   position: fixed;
   bottom: 0;
@@ -226,19 +244,20 @@ h3 {
   z-index: 99999;
   position: fixed;
   margin: auto;
-  top: 150px;
+  top: 100px;
   border: 12px solid #FFF;
   border-radius: 7px;
   width: 800px;
-  height: 500px; }
+  height: 500px;
+  position: relative; }
 
 .close-button {
   color: black;
   font-size: 30px;
   font-weight: bold;
-  position: relative;
-  left: 397px;
-  top: 133px;
+  position: absolute;
+  right: 300px;
+  top: 155px;
   z-index: 9999999;
   background: white;
   width: 40px;

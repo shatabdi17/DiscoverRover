@@ -111,19 +111,34 @@ h3{
 
 
 //------
+//nasa-image
+//------
+.nasa-image > img {
+    z-index: 99999;
+    position: fixed;     
+    margin:auto;
+    left: 200px;
+    //top: 100px;
+    border: 10px solid $white;
+}
+
+
+
+//------
 //quote
 //------
 
 .quote {
     width:400px;
     height: auto;
-    position: relative;
+    position: fixed;
     top: 250px;
     color: $black;
     background: $backgroundTransparent;
     left: 400px;
     border-radius: 7px;
     padding: 20px;
+    z-index: $quotes;
     q {
         font-size: 25px;
     }

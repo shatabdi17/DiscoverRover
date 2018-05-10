@@ -43,7 +43,10 @@ rover.scroll = () => {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-//rando number generator 
+
+
+//random number generator 
+
 rover.randomNum = (max) => Math.floor(Math.random()*max);
 
 //------
@@ -90,8 +93,10 @@ rover.toggleQuoteDisplayTimer = () => {
 rover.displayNasaImg = (roverImgs) => {
     let randomIndex = rover.randomNum(roverImgs.length);
     const imgChoice = roverImgs[randomIndex].img_src;
+    // imgChoice.css('height', '500px');
     console.log(imgChoice);
-    
+    const imageContainer = $('.nasa-image');
+    imageContainer.append(`<img src="${imgChoice}">)`);
 }
 
 

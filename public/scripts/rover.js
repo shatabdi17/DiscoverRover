@@ -45,7 +45,10 @@ rover.scroll = function () {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-//rando number generator 
+
+
+//random number generator 
+
 rover.randomNum = function (max) {
     return Math.floor(Math.random() * max);
 };
@@ -56,6 +59,8 @@ rover.randomNum = function (max) {
 rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
     var quoteAuthor = quote.quoteAuthor;
+
+
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
@@ -93,7 +98,11 @@ rover.toggleQuoteDisplayTimer = function () {
 rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
     var imgChoice = roverImgs[randomIndex].img_src;
+    // imgChoice.css('height', '500px');
     console.log(imgChoice);
+
+    var imageContainer = $('.nasa-image');
+    imageContainer.append('<img src="' + imgChoice + '">)');
 };
 
 rover.eventRoverClick = function () {

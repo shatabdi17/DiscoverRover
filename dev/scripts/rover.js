@@ -40,13 +40,12 @@ rover.getQuote = () => {
 //parallax effect
 //---------------
 rover.scroll = () => {
-    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
+    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3', '#myCanvas']);
 };
 
 
 
 //random number generator 
-
 rover.randomNum = (max) => Math.floor(Math.random()*max);
 
 //------
@@ -106,31 +105,6 @@ rover.eventRoverClick = () => {
     });
 };
 
-//---------------------
-// Adjust Screen sizes
-//---------------------
-
-// rover.adjustBackgroundForScreenResize = () => {
-//     window.onresize = displayWindowSize;
-//     window.onload = displayWindowSize;
-
-//     function displayWindowSize() {
-//         const windowWidth = window.innerWidth;
-//         //const windowHeight = window.innerHeight;
-//         console.log(windowWidth);
-//         const skyBG = $('.sky');
-//         skyBG.css('width', '105vw');
-//     };
-// }
-
-// rover.windowResize = () => {
-//     $(window).resize(
-//         function () {
-//             console.log('window resizing');
-//             rover.adjustBackgroundForScreenResize();
-//     });
-// }
-
 rover.init = () => {
     //start inverted parallax scroll
     rover.scroll();
@@ -139,7 +113,6 @@ rover.init = () => {
     rover.toggleQuoteDisplayTimer();
     //click rover to get NASA imgs
     rover.eventRoverClick();
-   
 };
 
 

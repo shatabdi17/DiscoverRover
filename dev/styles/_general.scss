@@ -1,5 +1,11 @@
 .hide{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show{
+    visibility: visible;
+    opacity: 1;
 }
 
 html{
@@ -8,30 +14,22 @@ html{
     width: 100%;
     height: 100%;
     background: $darkBlue;
+    body{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 1px;
+        background: linear-gradient($darkOrange, $darkBlue);
+    }
 }
-body{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 1px;
-    background: linear-gradient($darkOrange, $darkBlue);
-}
-
-//-----------
-// intro page
-//-----------
-.intro{
-    background: url(/public/assets/sunset-cropped.jpg);
-    width: 100%;
-    height: 100%;
-}
-
 canvas{
     width: 100vw;
     height: 100vh;
     @include fixed();
 }
-
+//-----------
+// intro page
+//-----------
 .intro-container {
     background:$darkBlue;
     position: relative;
@@ -40,8 +38,6 @@ canvas{
     justify-content: center;
     align-items: center;
     //transform: translateY(50%);
-    
-   
 }
 .select-rover {
     color: $white;
@@ -72,27 +68,7 @@ canvas{
 //--------------
 //styling fonts
 //--------------
-.main-title{
-    @include font(50);
-    color: $accent;
-    text-align: center;
-}
 
-h1{
-    @include font(30);
-    color: $accent;
-}
-
-h2{
-    @include font(20);
-    color: $accentDark;
-    text-align: center;
-}
-
-h3{
-    @include font(15);
-    color: $accentDark;
-}
 //------------------------------------
 //styling radio buttons and img labels
 //------------------------------------
@@ -108,16 +84,14 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: $nasaImgs;
    // background: $backgroundTransparent;
-     
 }
 
 
 .nasa-image > img {
-    z-index: 99999;
-    position: fixed;     
     margin:auto;
-    top: 100px;  
     border: 12px solid $white;
     border-radius:7px;
     width: 800px;
@@ -137,6 +111,7 @@ h3{
     height: 40px;
     text-align: center;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 

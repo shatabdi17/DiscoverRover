@@ -4,8 +4,11 @@ var rover = {};
 
 rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 
+//----------
+//API Calls
+//----------
 rover.getNasa = function () {
-    return $.ajax({
+    $.ajax({
         url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos',
         method: 'GET',
         dataType: 'json',
@@ -35,71 +38,63 @@ rover.getQuote = function () {
         rover.displayQuote(res);
     });
 };
-
+//---------------
 //parallax effect
+//---------------
 rover.scroll = function () {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-// QUOTE FOR BUBBLE STARTS
-
-
-// function createTooltip(event) {
-//     $('<div class="tooltip"></div>').appendTo('body');
-//     positionTooltip(event);
-// };
-
-// timeoutID = setTimeout(hideBubble, 150);
-
-// function hideBubble() {
-//     clearTimeout(timeoutID);
-//     //--if the mouse isn't on the div then hide the bubble
-//     if (bubbleExists && !onDiv) {
-//         $(".rover").remove();
-//         bubbleExists = false;
-//     }
-// }
-
-// // QUOTE FOR BUBBLE ENDS
-
+//rando number generator 
 rover.randomNum = function (max) {
     return Math.floor(Math.random() * max);
 };
 
+//------
+//Quote
+//------
 rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
     var quoteAuthor = quote.quoteAuthor;
-
-    console.log(quoteText, quoteAuthor);
     var quoteContainer = $('.quote');
+    quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
-
     //console.log(quoteText, quoteAuthor);
 };
 
+rover.quoteDisplayTimer = function () {
+    setInterval(function () {
+        rover.getQuote();
+    }, 10000);
+};
+
+//HELP CUE!!!!!!!!
+//NEED PROMISE
+rover.toggleQuoteDisplayTimer = function () {
+    setInterval(function () {
+        var quoteContainer = $('.quote');
+        quoteContainer.toggle('.hide');
+    }, 10000);
+};
+
+// $.when(jokeOne, jokeTwo)
+//     .then((resOne, resTwo) => {
+//         //returns array
+//         console.log(resOne, resTwo)
+//         console.log(resOne[0], resTwo[0])
+//     })
+//     .fail((err) => {
+//         console.log(err);
+//     });
+
+//-------
+// Nasa 
+//-------
 rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
     var imgChoice = roverImgs[randomIndex].img_src;
     console.log(imgChoice);
-
 };
-
-// rover.chooseAPI = (num) => {
-//     if(num === 0){
-//         console.log('quote');
-//         rover.getQuote();
-//         //call quote api 
-//     //display bubble above the rover
-//     //make quote last 5 seconds and then disappear
-//     }else{
-//         console.log('nasa');
-
-//         //call nasa api
-//     // display full image 
-//     //include exit button to close image
-//     }
-// }
-
 
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
@@ -107,13 +102,39 @@ rover.eventRoverClick = function () {
     });
 };
 
+//---------------------
+// Adjust Screen sizes
+//---------------------
+
+// rover.adjustBackgroundForScreenResize = () => {
+//     window.onresize = displayWindowSize;
+//     window.onload = displayWindowSize;
+
+//     function displayWindowSize() {
+//         const windowWidth = window.innerWidth;
+//         //const windowHeight = window.innerHeight;
+//         console.log(windowWidth);
+//         const skyBG = $('.sky');
+//         skyBG.css('width', '105vw');
+//     };
+// }
+
+// rover.windowResize = () => {
+//     $(window).resize(
+//         function () {
+//             console.log('window resizing');
+//             rover.adjustBackgroundForScreenResize();
+//     });
+// }
+
 rover.init = function () {
-    //rover.parallax();
+    //start inverted parallax scroll
     rover.scroll();
+    //start timer to display quote
+    rover.quoteDisplayTimer();
+    rover.toggleQuoteDisplayTimer();
+    //click rover to get NASA imgs
     rover.eventRoverClick();
-    //nasa called in init because it takes awhile to load and only needs to be called once
-    //console.log(rover.getNasa());
-    rover.getQuote();
 };
 
 $(rover.init());

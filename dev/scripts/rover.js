@@ -40,27 +40,6 @@ rover.scroll = () => {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-// QUOTE FOR BUBBLE STARTS
-
-
-// function createTooltip(event) {
-//     $('<div class="tooltip"></div>').appendTo('body');
-//     positionTooltip(event);
-// };
-
-// timeoutID = setTimeout(hideBubble, 150);
-
-// function hideBubble() {
-//     clearTimeout(timeoutID);
-//     //--if the mouse isn't on the div then hide the bubble
-//     if (bubbleExists && !onDiv) {
-//         $(".rover").remove();
-//         bubbleExists = false;
-//     }
-// }
-
-// // QUOTE FOR BUBBLE ENDS
-
 rover.randomNum = (max) => Math.floor(Math.random()*max);
     
 
@@ -77,8 +56,10 @@ rover.displayQuote = (quote) => {
 rover.displayNasaImg = (roverImgs) => {
     let randomIndex = rover.randomNum(roverImgs.length);
     const imgChoice = roverImgs[randomIndex].img_src;
+    // imgChoice.css('height', '500px');
     console.log(imgChoice);
-    
+    const imageContainer = $('.nasa-image');
+    imageContainer.append(`<img src="${imgChoice}">)`);
 }
 
 

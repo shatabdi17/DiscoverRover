@@ -246,16 +246,24 @@ h3 {
   text-shadow: 0 0 1.5rem #F7FDFF;
   color: #efa424; }
 
+.nasa-image > img {
+  z-index: 99999;
+  position: fixed;
+  margin: auto;
+  left: 200px;
+  border: 10px solid #FFF; }
+
 .quote {
   width: 400px;
   height: auto;
-  position: relative;
+  position: fixed;
   top: 250px;
   color: #3A3A3A;
   background: rgba(247, 253, 255, 0.85);
   left: 400px;
   border-radius: 7px;
-  padding: 20px; }
+  padding: 20px;
+  z-index: 6; }
   .quote q {
     font-size: 25px; }
   .quote p {

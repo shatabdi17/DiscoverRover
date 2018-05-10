@@ -165,7 +165,8 @@ canvas {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  height: 100vh; }
 
 .select-rover {
   color: #FFF;
@@ -257,7 +258,7 @@ h3 {
   font-weight: bold;
   position: absolute;
   right: 300px;
-  top: 155px;
+  top: 105px;
   z-index: 9999999;
   background: white;
   width: 40px;

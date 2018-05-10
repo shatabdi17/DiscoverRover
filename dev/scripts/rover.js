@@ -52,12 +52,12 @@ rover.getQuote = () => {
 rover.hideIntroContainer = () => {
     const intro = $('.intro-container');
     const main = $('.main-container');
-    //main.hide();
+    main.hide();
     const form = $('form')
     form.on('submit', (e) => {
         e.preventDefault();
         console.log('form submitted');
-        // intro.hide();
+         intro.hide();
          main.show();
     });
 };
@@ -120,8 +120,7 @@ rover.displayNasaImg = (roverImgs) => {
     console.log(imgChoice);
     const imageContainer = $('.nasa-image');
     imageContainer.empty();
-    imageContainer.append(`<img src="${imgChoice}">)`);
-    imageContainer.append(`<span class="close-button">&#x2715</span>`)
+    imageContainer.append(`<img src="${imgChoice}"><span class="close-button">&#x2715</span>`);
 }
 
 

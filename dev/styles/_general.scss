@@ -28,6 +28,7 @@ canvas{
     display: flex;
     justify-content: center;
     align-items: center;
+    height:100vh;
     //transform: translateY(50%);
     
    
@@ -118,7 +119,7 @@ h3{
     font-weight: bold;
     position: absolute;
     right: 300px;
-    top: 155px;
+    top: 105px;
     z-index: 9999999;
     background: white;
     width: 40px;

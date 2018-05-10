@@ -137,14 +137,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 62.5%;
-  background: #000080;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: #000080; }
 
 body {
   position: relative;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  padding: 1px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c76e00), to(#000080));
+  background: linear-gradient(#c76e00, #000080); }
 
 canvas {
   width: 100vw;
@@ -182,7 +185,7 @@ canvas {
   height: 239px;
   width: 20000px;
   overflow: hidden;
-  z-index: 4;
+  z-index: 2;
   bottom: 0; }
 
 .rover-img {
@@ -191,7 +194,7 @@ canvas {
   height: auto;
   left: 100px;
   bottom: 57px;
-  z-index: 5; }
+  z-index: 3; }
 
 .main-title {
   font-size: 50px;
@@ -199,7 +202,7 @@ canvas {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: #3A3A3A;
-  text-shadow: 0 0 1.5rem #F7FDFF;
+  text-shadow: 0 0 1.5rem 1;
   color: #fcad26;
   text-align: center; }
 
@@ -209,7 +212,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: #3A3A3A;
-  text-shadow: 0 0 1.5rem #F7FDFF;
+  text-shadow: 0 0 1.5rem 1;
   color: #fcad26; }
 
 h2 {
@@ -218,8 +221,8 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: #3A3A3A;
-  text-shadow: 0 0 1.5rem #F7FDFF;
-  color: #efa424;
+  text-shadow: 0 0 1.5rem 1;
+  color: #c76e00;
   text-align: center; }
 
 h3 {
@@ -228,8 +231,8 @@ h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   color: #3A3A3A;
-  text-shadow: 0 0 1.5rem #F7FDFF;
-  color: #efa424; }
+  text-shadow: 0 0 1.5rem 1;
+  color: #c76e00; }
 
 .nasa-image {
   width: 100%;
@@ -239,7 +242,10 @@ h3 {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .nasa-image > img {
   z-index: 99999;
@@ -253,14 +259,14 @@ h3 {
   position: relative; }
 
 .close-button {
-  color: black;
+  color: #3A3A3A;
   font-size: 30px;
   font-weight: bold;
   position: absolute;
   right: 300px;
   top: 105px;
   z-index: 9999999;
-  background: white;
+  background: #FFF;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -284,7 +290,7 @@ h3 {
   left: 400px;
   border-radius: 7px;
   padding: 20px;
-  z-index: 6; }
+  z-index: 4; }
   .quote q {
     font-size: 25px; }
   .quote p {

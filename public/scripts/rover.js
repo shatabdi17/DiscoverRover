@@ -45,12 +45,12 @@ rover.getQuote = function () {
 rover.hideIntroContainer = function () {
     var intro = $('.intro-container');
     var main = $('.main-container');
-    //main.hide();
+    main.hide();
     var form = $('form');
     form.on('submit', function (e) {
         e.preventDefault();
         console.log('form submitted');
-        // intro.hide();
+        intro.hide();
         main.show();
     });
 };

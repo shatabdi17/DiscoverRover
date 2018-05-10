@@ -43,10 +43,9 @@ rover.scroll = () => {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-<<<<<<< HEAD
-=======
-//rando number generator 
->>>>>>> 2009626edf4cbaacc3c3981d76e320f0fb334b1b
+
+//random number generator 
+
 rover.randomNum = (max) => Math.floor(Math.random()*max);
 
 //------

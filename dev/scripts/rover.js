@@ -44,7 +44,6 @@ rover.scroll = () => {
 };
 
 
-
 //random number generator 
 rover.randomNum = (max) => Math.floor(Math.random()*max);
 

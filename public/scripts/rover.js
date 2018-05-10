@@ -97,6 +97,7 @@ rover.displayNasaImg = function (roverImgs) {
     console.log(imgChoice);
     var imageContainer = $('.nasa-image');
     imageContainer.append('<img src="' + imgChoice + '">)');
+
 };
 
 rover.eventRoverClick = function () {
@@ -104,31 +105,6 @@ rover.eventRoverClick = function () {
         rover.getNasa();
     });
 };
-
-//---------------------
-// Adjust Screen sizes
-//---------------------
-
-// rover.adjustBackgroundForScreenResize = () => {
-//     window.onresize = displayWindowSize;
-//     window.onload = displayWindowSize;
-
-//     function displayWindowSize() {
-//         const windowWidth = window.innerWidth;
-//         //const windowHeight = window.innerHeight;
-//         console.log(windowWidth);
-//         const skyBG = $('.sky');
-//         skyBG.css('width', '105vw');
-//     };
-// }
-
-// rover.windowResize = () => {
-//     $(window).resize(
-//         function () {
-//             console.log('window resizing');
-//             rover.adjustBackgroundForScreenResize();
-//     });
-// }
 
 rover.init = function () {
     //start inverted parallax scroll

@@ -97,7 +97,7 @@ rover.displayNasaImg = function (roverImgs) {
     console.log(imgChoice);
     var imageContainer = $('.nasa-image');
     imageContainer.append('<img src="' + imgChoice + '">)');
-
+    imageContainer.append('<span class="close-button">&#x2715</span>');
 };
 
 rover.eventRoverClick = function () {

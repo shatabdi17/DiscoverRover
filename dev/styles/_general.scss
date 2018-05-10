@@ -73,16 +73,43 @@ h3{
 
 //----------
 //nasa-image
-//----------
+//------
+
+.nasa-image {
+    width: 100%;
+    height: 100%;
+     display: flex;
+    justify-content: center;
+   // background: $backgroundTransparent;
+     
+}
+
+
 .nasa-image > img {
     z-index: 99999;
     position: fixed;     
     margin:auto;
-    left: 200px;
-    //top: 100px;
-    border: 10px solid $white;
+     //left: 150px;
+    top: 150px;  
+    border: 12px solid $white;
+    border-radius:7px;
+    width: 800px;
+    height:500px;
 }
-
+.close-button {
+    color: black;
+    font-size:30px;
+    font-weight: bold;
+    position: relative;
+    left:397px;
+    top: 133px;
+    z-index: 9999999;
+    background: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 30px;
+}
 
 
 //------
@@ -118,12 +145,14 @@ h3{
     }
 }
 
-.quote::after{
+.quote::after {
     content: '';
     border-top: 20px solid $backgroundTransparent;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     position: fixed;
+    margin-top: 20px;
+   
 
 }
 

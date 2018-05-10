@@ -32,6 +32,22 @@ canvas{
     @include fixed();
 }
 
+.intro-container {
+    background:$darkBlue;
+    position: relative;
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //transform: translateY(50%);
+    
+   
+}
+.select-rover {
+    color: $white;
+    font-size:40px;
+}
+
 .sand{
     @include fixed();
     background: url(../assets/mars-bg.svg);
@@ -101,20 +117,20 @@ h3{
     z-index: 99999;
     position: fixed;     
     margin:auto;
-     //left: 150px;
-    top: 150px;  
+    top: 100px;  
     border: 12px solid $white;
     border-radius:7px;
     width: 800px;
     height:500px;
+    position: relative;
 }
 .close-button {
     color: $black;
     font-size:30px;
     font-weight: bold;
-    position: relative;
-    left:397px;
-    top: 133px;
+    position: absolute;
+    right: 300px;
+    top: 155px;
     z-index: 9999999;
     background: $white;
     width: 40px;

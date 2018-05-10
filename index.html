@@ -19,20 +19,21 @@
 </head>
 <body>
 	<header>
-		<section class="intro">
-			<h1>Select Your Rover</h1>
+		<section class="intro-container">
 			<form action="">
+				<label class"select-rover"for="chooseRover">Select Your Rover</label>
 				<select name="chooseRover" id="chooseRover">
 					<option value="curiousity">Curiousity</option>
 					<option value="opportunity">Opportunity</option>
 					<option value="spirit">Spirit</option>
 				</select>
-				<input type="submit" value="Choose Your Companion">
+				<input class="rover-select-button" type="submit" value="Choose Your Companion">
 			</form>
 		</section>
 	</header>
-	<main>
-		<div class="sand"></div>
+	<main class="main-container">
+		<div class="sand">
+		</div>
 		<div class="rover">
 			<img class="rover-img" src="public/assets/rover.png" alt=""></div>
 		<div class="nasa-image"></div>

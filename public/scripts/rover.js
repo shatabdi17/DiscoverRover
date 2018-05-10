@@ -54,12 +54,12 @@ rover.getQuote = function () {
 rover.hideIntroContainer = function () {
     var intro = $('.intro-container');
     var main = $('.main-container');
-    //main.hide();
+    main.hide();
     var form = $('form');
     form.on('submit', function (e) {
         e.preventDefault();
         console.log('form submitted');
-        // intro.hide();
+        intro.hide();
         main.show();
     });
 };
@@ -106,8 +106,7 @@ rover.displayNasaImg = function (roverImgs) {
     var imageContainer = $('.nasa-image');
 
     imageContainer.empty();
-    imageContainer.append('<img src="' + imgChoice + '">)');
-    imageContainer.append('<span class="close-button">&#x2715</span>');
+    imageContainer.append('<img src="' + imgChoice + '"><span class="close-button">&#x2715</span>');
 };
 
 rover.eventRoverClick = function () {

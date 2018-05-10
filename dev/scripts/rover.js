@@ -2,8 +2,11 @@ const rover = {};
 
 rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC'
 
+//----------
+//API Calls
+//----------
 rover.getNasa = () => {
-    return $.ajax({
+    $.ajax({
         url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos`,
         method: 'GET',
         dataType: 'json',
@@ -33,26 +36,60 @@ rover.getQuote = () => {
         rover.displayQuote(res);
     });
 };
-
-
+//---------------
 //parallax effect
+//---------------
 rover.scroll = () => {
     $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
 };
 
-rover.randomNum = (max) => Math.floor(Math.random()*max);
-    
 
+
+//random number generator 
+
+rover.randomNum = (max) => Math.floor(Math.random()*max);
+
+//------
+//Quote
+//------
 rover.displayQuote = (quote) => {
     const quoteText = quote.quoteText;
     const quoteAuthor = quote.quoteAuthor;
-    console.log(quoteText, quoteAuthor);
     const quoteContainer = $('.quote');
+    quoteContainer.empty();
     quoteContainer.append(`<q>${quoteText}</q> 
                         <p>${quoteAuthor}</p>`);
     //console.log(quoteText, quoteAuthor);
 };
 
+rover.quoteDisplayTimer = () => {
+    setInterval(function () { 
+        rover.getQuote();
+    }, 10000);
+};
+
+//HELP CUE!!!!!!!!
+//NEED PROMISE
+rover.toggleQuoteDisplayTimer = () => {
+    setInterval(function(){
+        const quoteContainer = $('.quote');
+        quoteContainer.toggle('.hide');
+    }, 10000);
+}
+
+// $.when(jokeOne, jokeTwo)
+//     .then((resOne, resTwo) => {
+//         //returns array
+//         console.log(resOne, resTwo)
+//         console.log(resOne[0], resTwo[0])
+//     })
+//     .fail((err) => {
+//         console.log(err);
+//     });
+
+//-------
+// Nasa 
+//-------
 rover.displayNasaImg = (roverImgs) => {
     let randomIndex = rover.randomNum(roverImgs.length);
     const imgChoice = roverImgs[randomIndex].img_src;
@@ -63,37 +100,46 @@ rover.displayNasaImg = (roverImgs) => {
 }
 
 
-
-// rover.chooseAPI = (num) => {
-//     if(num === 0){
-//         console.log('quote');
-//         rover.getQuote();
-//         //call quote api 
-//     //display bubble above the rover
-//     //make quote last 5 seconds and then disappear
-//     }else{
-//         console.log('nasa');
-        
-//         //call nasa api
-//     // display full image 
-//     //include exit button to close image
-//     }
-// }
-
-
 rover.eventRoverClick = () => {
     $('.rover-img').on('click', function(){
         rover.getNasa();
     });
 };
 
+//---------------------
+// Adjust Screen sizes
+//---------------------
+
+// rover.adjustBackgroundForScreenResize = () => {
+//     window.onresize = displayWindowSize;
+//     window.onload = displayWindowSize;
+
+//     function displayWindowSize() {
+//         const windowWidth = window.innerWidth;
+//         //const windowHeight = window.innerHeight;
+//         console.log(windowWidth);
+//         const skyBG = $('.sky');
+//         skyBG.css('width', '105vw');
+//     };
+// }
+
+// rover.windowResize = () => {
+//     $(window).resize(
+//         function () {
+//             console.log('window resizing');
+//             rover.adjustBackgroundForScreenResize();
+//     });
+// }
+
 rover.init = () => {
-    //rover.parallax();
+    //start inverted parallax scroll
     rover.scroll();
+    //start timer to display quote
+    rover.quoteDisplayTimer()
+    rover.toggleQuoteDisplayTimer();
+    //click rover to get NASA imgs
     rover.eventRoverClick();
-    //nasa called in init because it takes awhile to load and only needs to be called once
-    //console.log(rover.getNasa());
-    rover.getQuote();
+   
 };
 
 

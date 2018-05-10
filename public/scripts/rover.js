@@ -42,11 +42,10 @@ rover.getQuote = function () {
 //parallax effect
 //---------------
 rover.scroll = function () {
-    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3']);
+    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3', '#myCanvas']);
 };
 
 //random number generator 
-
 rover.randomNum = function (max) {
     return Math.floor(Math.random() * max);
 };
@@ -106,31 +105,6 @@ rover.eventRoverClick = function () {
         rover.getNasa();
     });
 };
-
-//---------------------
-// Adjust Screen sizes
-//---------------------
-
-// rover.adjustBackgroundForScreenResize = () => {
-//     window.onresize = displayWindowSize;
-//     window.onload = displayWindowSize;
-
-//     function displayWindowSize() {
-//         const windowWidth = window.innerWidth;
-//         //const windowHeight = window.innerHeight;
-//         console.log(windowWidth);
-//         const skyBG = $('.sky');
-//         skyBG.css('width', '105vw');
-//     };
-// }
-
-// rover.windowResize = () => {
-//     $(window).resize(
-//         function () {
-//             console.log('window resizing');
-//             rover.adjustBackgroundForScreenResize();
-//     });
-// }
 
 rover.init = function () {
     //start inverted parallax scroll

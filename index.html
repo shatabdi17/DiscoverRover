@@ -12,7 +12,7 @@
 	<!--Load AOS.css-->
 	<link rel="stylesheet" href="/public/styles/aos.css">
 	<!--Load google fonts-->
-	
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 	<!--Link to stylesheet-->
 	<link rel="stylesheet" href="public/styles/rover.css">
 
@@ -21,13 +21,15 @@
 	<header>
 		<section class="intro-container">
 			<form action="">
-				<label class="select-rover"for="chooseRover">Select Your Rover</label>
+				<label for="chooseRover">Welcome to Mars!</label>
+				<div id="charge">
+  					<pre>{"charged":"100%"}</pre> </div>
 				<select class="rover-selection-container" name="chooseRover" id="chooseRover">
+					<option value="curiosity">Select Your Rover</option>
 					<option value="curiosity">Curiosity</option>
 					<option value="opportunity">Opportunity</option>
 					<option value="spirit">Spirit</option>
 				</select>
-				<input class="rover-select-button" type="submit" value="Choose Your Companion">
 			</form>
 		</section>
 	</header>
@@ -37,7 +39,7 @@
 		<div class="rover">
 			<img class="rover-img" src="public/assets/rover.png" alt=""></div>
 		<div class="nasa-image hide"></div>
-		<div class="quote hide"></div>
+		<div class="quote hidden"></div>
     
 		<!-- <div class="social-btn">
 			 twitter 

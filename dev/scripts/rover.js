@@ -74,7 +74,7 @@ rover.displayQuote = (quote) => {
     quoteContainer.empty();
     quoteContainer.append(`<q>${quoteText}</q> 
                         <p>${quoteAuthor}</p>`);
-    //console.log(quoteText, quoteAuthor);
+    console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = () => {
@@ -114,7 +114,30 @@ rover.eventCloseClick = () => {
     });
 };
 
+//-------
+// Intro
+//-------
+
+rover.charge = () => {
+    const obj = { charged: '0%' };
+
+    const JSobject = anime({
+        targets: obj,
+        charged: '100%',
+        round: 1,
+        easing: 'linear',
+        update: function () {
+            var el = document.querySelector('#charge pre');
+            el.innerHTML = JSON.stringify(obj);
+        }
+    });
+}
+
 rover.init = () => {
+    //focus on input on load
+    const select = $('.rover-selection-container').focus();
+    //charging rover
+    rover.charge();
     // hiding the intro container
     rover.introSubmit();
     //start inverted parallax scroll

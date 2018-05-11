@@ -78,11 +78,9 @@ form{
     }
     .rover-selection-container {
     @include font(20, 400);
-    padding: 10px;
-    border: none;
+    width: 200px;
+    height: 40px;
     background: $backgroundTransparent;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     border: 2px solid transparent;
     }
     
@@ -96,6 +94,7 @@ form{
         box-shadow: 0 0 15px $white;
     }
 }
+
 
 
 // .rover-select-button {

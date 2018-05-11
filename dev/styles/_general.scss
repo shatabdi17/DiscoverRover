@@ -100,6 +100,52 @@ form{
 //------------
 // Background
 //------------
+.planets{
+    position: fixed;
+    z-index: $background;
+    height: 100vh;
+    img{
+        position: absolute;
+    }
+}
+
+.pink-container{
+    width: 105vw;
+    #pink-planet{
+        width: 300px;
+        top: 45%;
+        left: 8%;
+        transform: rotate(-20deg);
+    }
+}
+
+.green-container{
+    width: 101vw;
+    #green-planet{
+        width: 500px;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%);
+    }
+}
+
+.red-container{
+    width: 110vw;
+    #red-planet{
+        width: 150px;
+        top:  15%;
+        left: 25%;
+    }
+}
+
+.yellow-container{
+    width: 103vw;
+    #yellow-planet{
+        width: 350px;
+        right: 5%;
+        top: 8%;
+    }
+}
 
 .sand {
     @include fixed();

@@ -225,6 +225,45 @@ form {
     -webkit-box-shadow: 0 0 15px #FFF;
             box-shadow: 0 0 15px #FFF; }
 
+.planets {
+  position: fixed;
+  z-index: 1;
+  height: 100vh; }
+  .planets img {
+    position: absolute; }
+
+.pink-container {
+  width: 105vw; }
+  .pink-container #pink-planet {
+    width: 300px;
+    top: 45%;
+    left: 8%;
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg); }
+
+.green-container {
+  width: 101vw; }
+  .green-container #green-planet {
+    width: 500px;
+    left: 50%;
+    top: 35%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%); }
+
+.red-container {
+  width: 110vw; }
+  .red-container #red-planet {
+    width: 150px;
+    top: 15%;
+    left: 25%; }
+
+.yellow-container {
+  width: 103vw; }
+  .yellow-container #yellow-planet {
+    width: 350px;
+    right: 5%;
+    top: 8%; }
+
 .sand {
   position: fixed;
   bottom: 0;

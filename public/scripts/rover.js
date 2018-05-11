@@ -75,7 +75,7 @@ rover.displayQuote = function (quote) {
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
-    //console.log(quoteText, quoteAuthor);
+    console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = function () {
@@ -114,7 +114,30 @@ rover.eventCloseClick = function () {
     });
 };
 
+//-------
+// Intro
+//-------
+
+rover.charge = function () {
+    var obj = { charged: '0%' };
+
+    var JSobject = anime({
+        targets: obj,
+        charged: '100%',
+        round: 1,
+        easing: 'linear',
+        update: function update() {
+            var el = document.querySelector('#charge pre');
+            el.innerHTML = JSON.stringify(obj);
+        }
+    });
+};
+
 rover.init = function () {
+    //focus on input on load
+    var select = $('.rover-selection-container').focus();
+    //charging rover
+    rover.charge();
     // hiding the intro container
     rover.introSubmit();
     //start inverted parallax scroll

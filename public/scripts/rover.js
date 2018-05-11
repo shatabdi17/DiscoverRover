@@ -9,16 +9,17 @@ rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 //----------
 rover.getNasa = function () {
     $.ajax({
-        url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos',
+        url: 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover.roverChoice + '/photos',
         method: 'GET',
         dataType: 'json',
         data: {
-            sol: '1000',
-            api_key: rover.roverApiKey,
-            page: '1',
-            camera: 'NAVCAM'
+            sol: '10',
+            api_key: rover.roverApiKey
+            // page: '1',
+            // camera: 'NAVCAM'
         }
     }).then(function (res) {
+        console.log(res);
         rover.displayNasaImg(res.photos);
     });
 };
@@ -42,26 +43,22 @@ rover.getQuote = function () {
 //-------
 // intro
 //-------
-rover.hideIntroContainer = function () {
+rover.introSubmit = function () {
     var intro = $('.intro-container');
     var main = $('.main-container');
     main.hide();
-    var form = $('form');
-    form.on('submit', function (e) {
-        e.preventDefault();
-        console.log('form submitted');
+    $('#chooseRover').on('change', function () {
+        rover.roverChoice = $(this).val();
         intro.hide();
         main.show();
     });
 };
 
-rover.introSubmit = function () {};
-
 //---------------
 //parallax effect
 //---------------
 rover.scroll = function () {
-    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3', '#myCanvas']);
+    $.jInvertScroll(['.sand', '#myCanvas']);
 };
 
 //random number generator 
@@ -78,6 +75,7 @@ rover.displayQuote = function (quote) {
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
+    //console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = function () {
@@ -99,12 +97,7 @@ rover.displayNasaImg = function (roverImgs) {
     rover.imgContainer.addClass('show');
     rover.imgContainer.removeClass('hide');
     console.log(imgChoice);
-
-    var imageContainer = $('.nasa-image');
-
-    imageContainer.empty();
     rover.imgContainer.html('<img src="' + imgChoice + '">\n        <span class="close-button">&#x2715</span>');
-
 };
 
 rover.eventRoverClick = function () {
@@ -123,7 +116,7 @@ rover.eventCloseClick = function () {
 
 rover.init = function () {
     // hiding the intro container
-    rover.hideIntroContainer();
+    rover.introSubmit();
     //start inverted parallax scroll
     rover.scroll();
     //start timer to display quote

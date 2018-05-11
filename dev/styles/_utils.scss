@@ -37,10 +37,10 @@ $nasaImgs: 5;
     line-height: ($scale / 10) * 1rem;
 }
 
-@mixin font($size){
+@mixin font($size, $weight){
     @include fontSizer($size);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: $weight;
     color: $black;
     text-shadow: 0 0 1.5rem $background;
 }

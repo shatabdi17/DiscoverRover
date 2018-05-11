@@ -131,6 +131,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+* {
+  font-family: 'Oxygen', sans-serif; }
+
+.hidden {
+  display: none; }
+
 .hide {
   visibility: hidden;
   opacity: 0; }
@@ -138,6 +144,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 .show {
   visibility: visible;
   opacity: 1; }
+
+*:focus {
+  outline: coral; }
 
 html {
   font-family: 'Montserrat', sans-serif;
@@ -161,7 +170,7 @@ canvas {
   left: 0; }
 
 .intro-container {
-  background: #000080;
+  background: url(/public/assets/sunset-cropped.jpg);
   position: fixed;
   z-index: 9000;
   display: -webkit-box;
@@ -176,32 +185,45 @@ canvas {
   height: 100vh;
   width: 100%; }
 
-.select-rover {
-  color: #FFF;
-  font-size: 40px;
-  display: block;
-  text-transform: uppercase;
-  word-spacing: 4px;
-  padding-bottom: 20px; }
+#charge {
+  font-size: 25px;
+  font-size: 2.5rem;
+  color: #3A3A3A; }
 
-.rover-selection-container {
-  padding: 10px;
-  font-size: 20px;
-  border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none; }
-
-.rover-select-button {
-  font-size: 18px;
-  padding: 10px;
-  border-radius: 7px;
-  margin-left: 20px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: none; }
-  .rover-select-button:hover {
-    color: #FFF;
-    background: black; }
+form {
+  text-align: center; }
+  form label {
+    font-size: 60px;
+    font-size: 6rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1;
+    color: #3A3A3A;
+    display: block;
+    text-transform: uppercase;
+    word-spacing: 4px; }
+  form .rover-selection-container {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1;
+    padding: 10px;
+    border: none;
+    background: rgba(247, 253, 255, 0.85);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 2px solid transparent; }
+  form .rover-selection-container:hover {
+    border: 2px solid #FFF;
+    -webkit-box-shadow: 0 0 15px #FFF;
+            box-shadow: 0 0 15px #FFF; }
+  form .rover-selection-container:focus {
+    border: 2px solid #FFF;
+    -webkit-box-shadow: 0 0 15px #FFF;
+            box-shadow: 0 0 15px #FFF; }
 
 .sand {
   position: fixed;
@@ -261,14 +283,6 @@ canvas {
   text-align: center;
   border-radius: 30px;
   cursor: pointer; }
-
-.showup {
-  color: red;
-  width: 200px;
-  height: 200px;
-  position: fixed;
-  left: 1000px;
-  z-index: 9999; }
 
 .quote {
   width: 400px;

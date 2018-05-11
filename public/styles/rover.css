@@ -185,23 +185,13 @@ canvas {
   height: 100vh;
   width: 100%; }
 
-.select-rover {
-  color: #FFF;
-  font-size: 40px;
-  display: block;
-  text-transform: uppercase;
-  word-spacing: 4px;
-  padding-bottom: 20px; 
-}
-
 #charge {
   font-size: 25px;
   font-size: 2.5rem;
   color: #3A3A3A; }
 
 form {
-  text-align: center; 
-}
+  text-align: center; }
   form label {
     font-size: 60px;
     font-size: 6rem;
@@ -212,20 +202,18 @@ form {
     color: #3A3A3A;
     display: block;
     text-transform: uppercase;
-    word-spacing: 4px; 
-}
-  form .rover-selection-container {   
-  font-size: 20px;
-  width: 200px;
-  height: 40px;
-  border: none; 
-  font-family: 'Oxygen', sans-serif;
-  font-weight: 400;
-   color: #3A3A3A;
-   text-shadow: 0 0 1.5rem 1;
-   background: rgba(247, 253, 255, 0.85);
-   border: 2px solid transparent; 
-}
+    word-spacing: 4px; }
+  form .rover-selection-container {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1;
+    width: 200px;
+    height: 40px;
+    background: rgba(247, 253, 255, 0.85);
+    border: 2px solid transparent; }
   form .rover-selection-container:hover {
     border: 2px solid #FFF;
     -webkit-box-shadow: 0 0 15px #FFF;
@@ -273,6 +261,7 @@ form {
     width: 350px;
     right: 5%;
     top: 8%; }
+
 
 .sand {
   position: fixed;
@@ -323,8 +312,8 @@ form {
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  right: 300px;
-  top: 90px;
+  right: 305px;
+  top: 140px;
   z-index: 9999999;
   background: #FFF;
   width: 40px;

@@ -97,19 +97,6 @@ form{
 
 
 
-// .rover-select-button {
-//     font-size:18px;
-//     padding: 10px;
-//     border-radius: 7px;
-//     margin-left: 20px;
-//     transition: all 0.3s ease;
-//     border: none;
-//     &:hover {
-//         color: $white;
-//         background: black;
-//     }
-// }
-
 //------------
 // Background
 //------------
@@ -222,8 +209,8 @@ form{
     font-size:30px;
     font-weight: bold;
     position: absolute;
-    right: 300px;
-    top: 90px;
+    right: 305px;
+    top: 140px;
     z-index: 9999999;
     background: $white;
     width: 40px;

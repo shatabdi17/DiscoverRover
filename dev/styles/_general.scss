@@ -1,3 +1,14 @@
+//-------------------
+// Toggle visibility
+//-------------------
+*{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
 .hide{
     visibility: hidden;
     opacity: 0;
@@ -7,6 +18,14 @@
     visibility: visible;
     opacity: 1;
 }
+
+*:focus{
+    outline: coral;
+}
+
+//--------------
+// Base styling
+//--------------
 
 html{
     font-family: 'Montserrat', sans-serif;
@@ -22,16 +41,18 @@ html{
         background: linear-gradient($darkOrange, $darkBlue);
     }
 }
+
 canvas{
     width: 100vw;
     height: 100vh;
     @include fixed();
 }
+
 //-----------
-// intro page
+// Intro page
 //-----------
 .intro-container {
-    background:$darkBlue;
+    background: url(/public/assets/sunset-cropped.jpg);
     position: fixed;
     z-index: 9000;
     display: flex;
@@ -40,21 +61,58 @@ canvas{
     height:100vh;
     width: 100%;   
 }
-.select-rover {
-    color: $white;
-    font-size:40px;
-    display: block;
-    text-transform: uppercase;
-    word-spacing: 4px;
-    padding-bottom: 20px;
-}
-.rover-selection-container {   
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    border: none;
+
+#charge{
+    @include fontSizer(25);
+    color: $black;
 }
 
+form{
+    text-align: center;
+    label {
+        @include font(60, 700);
+        color: $black;
+        display: block;
+        text-transform: uppercase;
+        word-spacing: 4px;
+    }
+    .rover-selection-container {
+    @include font(20, 400);
+    width: 200px;
+    height: 40px;
+    background: $backgroundTransparent;
+    border: 2px solid transparent;
+    }
+    
+    .rover-selection-container:hover{
+        border: 2px solid $white;
+        box-shadow: 0 0 15px $white;
+    }
+
+    .rover-selection-container:focus{
+        border: 2px solid $white;
+        box-shadow: 0 0 15px $white;
+    }
+}
+
+
+
+// .rover-select-button {
+//     font-size:18px;
+//     padding: 10px;
+//     border-radius: 7px;
+//     margin-left: 20px;
+//     transition: all 0.3s ease;
+//     border: none;
+//     &:hover {
+//         color: $white;
+//         background: black;
+//     }
+// }
+
+//------------
+// Background
+//------------
 
 .sand {
     @include fixed();
@@ -68,6 +126,10 @@ canvas{
     bottom: 0;
 }
 
+//-------
+// Rover
+//-------
+
 .rover-img{
     position: fixed;
     width: 300px;
@@ -78,7 +140,7 @@ canvas{
 }
 
 //--------------
-//styling fonts
+// Styling fonts
 //--------------
 
 //------------------------------------
@@ -86,9 +148,9 @@ canvas{
 //------------------------------------
 
 
-//----------
-//nasa-image
-//------
+//-----------
+// Nasa-image
+//-----------
 
 .nasa-image {
     width: 100%;
@@ -99,7 +161,6 @@ canvas{
     position: fixed;
     z-index: $nasaImgs;
 }
-
 
 .nasa-image > img {
     margin:auto;
@@ -126,18 +187,9 @@ canvas{
     cursor: pointer;
 }
 
-
-//------
-//quote
-//------
-.showup{
-    color: red;
-    width: 200px;
-    height: 200px;
-    position: fixed;
-    left: 1000px;
-    z-index: 9999;
-}
+//-------
+// Quote
+//-------
 
 .quote {
     width:400px;
@@ -167,8 +219,6 @@ canvas{
     border-right: 20px solid transparent;
     position: fixed;
     margin-top: 20px;
-   
-
 }
 
 //--------------

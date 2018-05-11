@@ -48,26 +48,13 @@ canvas{
     word-spacing: 4px;
     padding-bottom: 20px;
 }
-.rover-selection-container {
-    padding: 10px;
+.rover-selection-container {   
     font-size: 20px;
+    width: 200px;
+    height: 40px;
     border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
-.rover-select-button {
-    font-size:18px;
-    padding: 10px;
-    border-radius: 7px;
-    margin-left: 20px;
-    transition: all 0.3s ease;
-    border: none;
-    &:hover {
-        color: $white;
-        background: black;
-    }
-}
 
 .sand {
     @include fixed();

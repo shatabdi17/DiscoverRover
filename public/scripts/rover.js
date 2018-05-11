@@ -58,7 +58,7 @@ rover.introSubmit = function () {
 //parallax effect
 //---------------
 rover.scroll = function () {
-    $.jInvertScroll(['.sand', '#myCanvas']);
+    $.jInvertScroll(['.sand', '.pink-container', '.green-container', '.red-container', '.yellow-container', '#myCanvas']);
 };
 
 //random number generator 

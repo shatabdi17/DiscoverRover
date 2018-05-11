@@ -7,16 +7,17 @@ rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC'
 //----------
 rover.getNasa = () => {
     $.ajax({
-        url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos`,
+        url: `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover.roverChoice}/photos`,
         method: 'GET',
         dataType: 'json',
         data: {
-            sol: '1000',
+            sol: '10',
             api_key: rover.roverApiKey,
-            page: '1',
-            camera: 'NAVCAM'
+            // page: '1',
+            // camera: 'NAVCAM'
         }
     }).then((res) => {
+        console.log(res);
         rover.displayNasaImg(res.photos);
     });
 };
@@ -40,33 +41,28 @@ rover.getQuote = () => {
 //-------
 // intro
 //-------
-rover.hideIntroContainer = () => {
+rover.introSubmit = () => {
     const intro = $('.intro-container');
     const main = $('.main-container');
     main.hide();
-    const form = $('form')
-    form.on('submit', (e) => {
-        e.preventDefault();
-        console.log('form submitted');
-         intro.hide();
-         main.show();
+    $('#chooseRover').on('change', function () {
+        rover.roverChoice = $(this).val();   
+    intro.hide();
+    main.show();
     });
 };
 
-rover.introSubmit = () => {
-    
-}
 
 //---------------
 //parallax effect
 //---------------
 rover.scroll = () => {
-    $.jInvertScroll(['.foreground', '.sand', '.sky', '.mountains1', '.mountains2', '.mountains3', '#myCanvas']);
+    $.jInvertScroll(['.sand', '#myCanvas']);
 };
 
 
 //random number generator 
-rover.randomNum = (max) => Math.floor(Math.random()* max);
+rover.randomNum = (max) => Math.floor(Math.random() * max);
 
 //------
 //Quote
@@ -101,19 +97,18 @@ rover.displayNasaImg = (roverImgs) => {
     rover.imgContainer.removeClass('hide');
     console.log(imgChoice);
     rover.imgContainer.html(`<img src="${imgChoice}">
-        <span class="close-button">&#x2715</span>`
-        );
+        <span class="close-button">&#x2715</span>`);
 };
 
 rover.eventRoverClick = () => {
-    $('.rover-img').on('click', function(){
+    $('.rover-img').on('click', function () {
         rover.getNasa();
     });
 };
 
 rover.eventCloseClick = () => {
     const nasaImgContainer = $('.nasa-image');
-    nasaImgContainer.on('click', '.close-button', function(){
+    nasaImgContainer.on('click', '.close-button', function () {
         rover.imgContainer.addClass('hide')
         rover.imgContainer.removeClass('show');
     });
@@ -121,7 +116,7 @@ rover.eventCloseClick = () => {
 
 rover.init = () => {
     // hiding the intro container
-    rover.hideIntroContainer();
+    rover.introSubmit();
     //start inverted parallax scroll
     rover.scroll();
     //start timer to display quote

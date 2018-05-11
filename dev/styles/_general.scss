@@ -49,9 +49,11 @@ canvas{
     padding-bottom: 20px;
 }
 .rover-selection-container {
-    padding: 40px 80px;
+    padding: 10px;
     font-size: 20px;
     border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .rover-select-button {

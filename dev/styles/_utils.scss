@@ -5,19 +5,25 @@ $beigeTransparent: rgba(247, 247, 247, 0.70);//secondary
 $backgroundTransparent: rgba(247, 253, 255, 0.85);
 $white: #FFF;
 $black: #3A3A3A;
+$purple: #44146f;
+$darkRed: #a12758;
 $accent: #fcad26;
 $darkOrange: rgb(199, 110, 0);
+$darkOrangeTransparent: rgb(79, 10, 40);
 $darkBlue: #000080;
+$darkBlueTransparent: rgba(0, 0, 127, 0.2);
 
 
 
 //z-index positions
 $canvas: 0;
 $background: 1;
-$midground: 2;
-$rover: 3;
-$quotes: 4;
-$nasaImgs: 5;
+$astronaut: 2;
+$midground: 3;
+$rover: 4;
+$quotes: 5;
+$nasaImgs: 6;
+$intro: 7;
 
 //position
 @mixin fixed (){
@@ -71,7 +77,6 @@ $nasaImgs: 5;
     padding: $padding;
     margin: $margin;
 }
-
 
 //grid variables
 

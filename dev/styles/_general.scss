@@ -273,23 +273,33 @@ form{
 // Nasa-image
 //-----------
 
-.nasa-image {
+.nasa-image-container {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
+    z-index: 999999;
+    
+}
+.nasa-image {
+    width: 800px;
+    height: 700px;
+    position: relative;
     z-index: $nasaImgs;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 12px solid $white;
+    border-radius:7px;
+    
 }
 
 .nasa-image > img {
     margin:auto;
-    border: 12px solid $white;
-    border-radius:7px;
-    width: 800px;
-    height:500px;
-     position: relative;
+    
+    
+    width: 100%;
+    height: 100%;
+   
    
 }
 .close-button {
@@ -297,9 +307,9 @@ form{
     font-size:30px;
     font-weight: bold;
     position: absolute;
-    right: 305px;
-    top: 140px;
-    z-index: $nasaImgs;
+    right: -25px;
+    top: -29px;
+    z-index: 9999999;
     background: $white;
     width: 40px;
     height: 40px;

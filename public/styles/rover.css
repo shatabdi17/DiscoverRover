@@ -288,6 +288,7 @@ form {
     -webkit-animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite;
             animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite; }
 
+
 .milky-way-container {
   width: 101vw; }
   .milky-way-container #yellow-planet {
@@ -298,6 +299,7 @@ form {
             transform: skew(20, 20);
     -webkit-animation: rotateClockwise 30s ease-in-out infinite;
             animation: rotateClockwise 30s ease-in-out infinite; }
+
 
 .sand {
   position: fixed;
@@ -460,37 +462,38 @@ form {
     -webkit-transform: translateY(20px);
             transform: translateY(20px); } }
 
-.nasa-image {
+.nasa-image-container {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: fixed;
+  z-index: 999999; }
+
+.nasa-image {
+  width: 800px;
+  height: 700px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 12px solid #FFF;
+  border-radius: 7px; }
   z-index: 6; }
+
 
 .nasa-image > img {
   margin: auto;
-  border: 12px solid #FFF;
-  border-radius: 7px;
-  width: 800px;
-  height: 500px;
-  position: relative; }
+  width: 100%;
+  height: 100%; }
 
 .close-button {
   color: #3A3A3A;
   font-size: 30px;
   font-weight: bold;
   position: absolute;
-  right: 305px;
-  top: 140px;
-  z-index: 6;
+  right: -25px;
+  top: -29px;
+  z-index: 9999999; 
   background: #FFF;
   width: 40px;
   height: 40px;

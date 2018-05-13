@@ -74,7 +74,8 @@ rover.quoteDisplayTimer = function () {
 //-------
 // Nasa 
 //-------
-rover.imgContainer = $('.nasa-image');
+rover.imgContainer = $('.nasa-image-container');
+rover.directImgContainer = $('.nasa-image');
 
 rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
@@ -82,7 +83,7 @@ rover.displayNasaImg = function (roverImgs) {
     rover.imgContainer.addClass('show');
     rover.imgContainer.removeClass('hide');
     console.log(imgChoice);
-    rover.imgContainer.html('<img src="' + imgChoice + '">\n        <span class="close-button">&#x2715</span>');
+    rover.directImgContainer.html('<img src="' + imgChoice + '">\n        <span class="close-button">&#x2715</span>');
 };
 
 rover.eventRoverClick = function () {
@@ -92,8 +93,7 @@ rover.eventRoverClick = function () {
 };
 
 rover.eventCloseClick = function () {
-    var nasaImgContainer = $('.nasa-image');
-    nasaImgContainer.on('click', '.close-button', function () {
+    rover.imgContainer.on('click', '.close-button', function () {
         rover.imgContainer.addClass('hide');
         rover.imgContainer.removeClass('show');
     });

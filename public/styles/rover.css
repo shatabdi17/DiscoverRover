@@ -204,11 +204,7 @@ canvas {
   color: #3A3A3A; }
 
 form {
-  text-align: center;
-  border-radius: 7px;
-  -moz-user-select: none;
-  -moz-appearance: none;
-  -webkit-appearance: none; }
+  text-align: center; }
   form label {
     font-size: 60px;
     font-size: 6rem;
@@ -252,7 +248,11 @@ form {
     width: 200px;
     height: 40px;
     background: rgba(247, 253, 255, 0.85);
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+    border-radius: 7px;
+    -moz-user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
 
 .rover-selection-container:hover {
   border: 2px solid #FFF;
@@ -331,10 +331,10 @@ form {
             animation: rotateClockwise 30s ease-in-out infinite; }
 
 .rocket {
-  position: relative;
   width: 100%;
-  z-index: 2;
-  height: 100vh; }
+  z-index: 4;
+  height: 150px;
+  position: relative; }
   .rocket #rocket {
     position: absolute;
     -webkit-transform: rotate(40deg);
@@ -649,21 +649,10 @@ form {
     width: 400px;
     height: 300px; } }
 
-@media screen and (max-width: 414px) {
-  .nasa-image {
-    width: 350px;
-    height: 300px; }
-  .close-button {
-    width: 20px;
-    height: 20px;
-    font-size: 16px;
-    right: 12px;
-    top: 10px; } }
-
 @media screen and (max-width: 320px) {
   .nasa-image {
-    width: 270px;
-    height: 250px; }
+    width: 300px;
+    height: 300px; }
   .close-button {
     width: 20px;
     height: 20px;

@@ -9,6 +9,9 @@ rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 //     src: ['space.mp3']
 // });
 
+rover.introMusic = new Audio('../audio/intro.mp3');
+rover.backgroundMusic = new Audio('../audio/space.mp3');
+
 //----------
 // API Calls
 //----------
@@ -96,7 +99,7 @@ rover.eventRoverClick = function () {
         rover.getNasa();
     });
 };
-
+/// event for closing the image from getNasa()
 rover.eventCloseClick = function () {
     rover.imgContainer.on('click', '.close-button', function () {
         rover.imgContainer.addClass('hide');
@@ -108,6 +111,7 @@ rover.eventCloseClick = function () {
 // Intro
 //-------
 
+// anime.js
 rover.charge = function () {
     var obj = { charged: '0%' };
 
@@ -122,6 +126,7 @@ rover.charge = function () {
         }
     });
 };
+// anime.js ends
 
 rover.chooseRover = function () {
     var roverImg = $('.rover-img');
@@ -162,6 +167,7 @@ rover.init = function () {
     rover.eventRoverClick();
     //click to close NASA imgs
     rover.eventCloseClick();
+    rover.introMusic.play();
 };
 
 $(rover.init());

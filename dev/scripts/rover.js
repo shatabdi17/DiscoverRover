@@ -95,7 +95,7 @@ rover.eventRoverClick = () => {
         rover.getNasa();
     });
 };
-
+/// event for closing the image from getNasa()
 rover.eventCloseClick = () => {
     rover.imgContainer.on('click', '.close-button', function () {
         rover.imgContainer.addClass('hide')
@@ -107,6 +107,7 @@ rover.eventCloseClick = () => {
 // Intro
 //-------
 
+// anime.js
 rover.charge = () => {
     const obj = { charged: '0%' };
 
@@ -121,6 +122,7 @@ rover.charge = () => {
         }
     });
 };
+// anime.js ends
 
 rover.chooseRover = () => {
     const roverImg = $('.rover-img');
@@ -161,6 +163,8 @@ rover.init = () => {
     rover.eventRoverClick();
     //click to close NASA imgs
     rover.eventCloseClick();
+    rover.introMusic.play();
+    
 };
 
 $(rover.init());

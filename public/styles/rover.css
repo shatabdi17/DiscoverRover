@@ -188,6 +188,16 @@ canvas {
   height: 100vh;
   width: 100%; }
 
+.credit {
+  margin-top: 350px;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  color: #c511b6; }
+  .credit a {
+    text-decoration: none;
+    color: #c511b6; }
+
 #charge {
   font-size: 25px;
   font-size: 2.5rem;

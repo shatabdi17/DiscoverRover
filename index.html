@@ -87,33 +87,35 @@
 		<div class="nasa-image "></div>
 		</div>
     
-		 <div class="social-btn">
-			 twitter 
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Took a quiz and found my new accent! Find your&#39;s at Be Accellent!"
-			 data-via="melodyyunc" data-hashtags="Accellent" data-related="melodyyunc,hackeryou" data-show-count="false">Tweet</a>
+		<div class="social-btn">
+			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Journey to Mars and go on an adventure with the Mar Rovers!"
+			data-hashtags="Discover Rover" data-related="melodyyunc, shatabdi_nb,hackeryou" data-show-count="false"></a>
 			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			 facebook 
-			<div class="fb-like" data-href="https://melodyyun.com" data-layout="button" data-action="like" data-size="large" data-show-faces="false"
-			 data-share="true"></div>
-			<div id="fb-root"></div>
-			<script>(function (d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id)) return;
-					js = d.createElement(s); js.id = id;
-					js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=231354190754047&autoLogAppEvents=1';
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));</script>
-		</div> 
 
-		
+			<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"
+			data-mobile-iframe="true">
+				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+				 class="fb-xfbml-parse-ignore">Share</a>
+			</div>
+		</div>
 		
 	</main>
 	<canvas id="myCanvas" resize></canvas>
+
+	<script>(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=231354190754047&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	<!-- Paper.js -->
 	<script type="text/javascript" src="/public/scripts/library/paper-full.min.js"></script>
 	<script type="text/paperscript" src="/public/scripts/paperscript.js" canvas="myCanvas"></script>
 	<!-- jquery -->
 	<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script>
+	<!-- howler.js -->
+	<!-- <script src="/public/scripts/library/howler.core.js"></script> -->
 	<!-- animate.js -->
 	<script src="public/scripts/library/anime.min.js"></script>
 	<!-- invert scroll.js -->

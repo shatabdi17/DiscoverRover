@@ -302,8 +302,8 @@ form {
   width: 101vw; }
   .milky-way-container #yellow-planet {
     width: 280px;
-    left: 25%;
-    top: 8%;
+    left: 15%;
+    top: 5%;
     -webkit-transform: skew(20, 20);
             transform: skew(20, 20);
     -webkit-animation: rotateClockwise 30s ease-in-out infinite;

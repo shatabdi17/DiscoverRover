@@ -163,8 +163,6 @@ rover.init = () => {
     rover.eventRoverClick();
     //click to close NASA imgs
     rover.eventCloseClick();
-    rover.introMusic.play();
-    
 };
 
 $(rover.init());

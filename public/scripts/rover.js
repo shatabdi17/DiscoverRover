@@ -9,9 +9,6 @@ rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 //     src: ['space.mp3']
 // });
 
-rover.introMusic = new Audio('../audio/intro.mp3');
-rover.backgroundMusic = new Audio('../audio/space.mp3');
-
 //----------
 // API Calls
 //----------
@@ -167,7 +164,6 @@ rover.init = function () {
     rover.eventRoverClick();
     //click to close NASA imgs
     rover.eventCloseClick();
-    rover.introMusic.play();
 };
 
 $(rover.init());

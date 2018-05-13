@@ -280,10 +280,13 @@ form{
 //-----------------------------
 .social-btn{
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: $quotes;
+    #twitter{
+        background: $purple;
+    }
 }
 
 //-----------
@@ -312,13 +315,10 @@ form{
 
 .nasa-image > img {
     margin:auto;
-    
-    
     width: 100%;
     height: 100%;
-   
-   
 }
+
 .close-button {
     color: $black;
     font-size:30px;

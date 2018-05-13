@@ -472,11 +472,13 @@ form {
 
 .social-btn {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 5; }
+  .social-btn #twitter {
+    background: #44146f; }
 
 .nasa-image-container {
   width: 100%;

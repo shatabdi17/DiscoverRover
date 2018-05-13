@@ -216,6 +216,22 @@ form {
     display: block;
     text-transform: uppercase;
     word-spacing: 4px; }
+  form .select-container {
+    position: relative;
+    width: 200px;
+    margin: 0 auto; }
+    form .select-container select {
+      border-radius: 7px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      -moz-user-select: none;
+      padding: 2px 8px; }
+    form .select-container .fa-sort-down {
+      font-size: 25px;
+      position: absolute;
+      right: 3px;
+      top: 2px; }
   form p {
     font-size: 40px;
     font-size: 4rem;
@@ -480,7 +496,8 @@ form {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 5; }
+  z-index: 5;
+  width: 200px; }
   .social-btn #twitter {
     background: #44146f; }
 

@@ -233,7 +233,7 @@ form {
     form .select-container .fa-sort-down {
       font-size: 25px;
       position: absolute;
-      right: 3px;
+      right: 5px;
       top: 2px; }
   form p {
     font-size: 40px;
@@ -329,6 +329,19 @@ form {
             transform: skew(20, 20);
     -webkit-animation: rotateClockwise 30s ease-in-out infinite;
             animation: rotateClockwise 30s ease-in-out infinite; }
+
+.rocket {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  height: 100vh; }
+  .rocket #rocket {
+    position: absolute;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    width: 130px;
+    left: 20%;
+    bottom: 0px; }
 
 .sand {
   position: fixed;
@@ -587,8 +600,8 @@ form {
 
 @media screen and (max-width: 450px) {
   .intro-container {
-    background: url(/public/assets/mobileBG.jpg) no-repeat center center fixed;
-    background-size: cover; }
+    background: #44146f;
+    background-size: auto; }
   .credit {
     color: #000080; }
     .credit a {
@@ -612,6 +625,10 @@ form {
       word-spacing: 4px; }
     form p {
       color: #FFF; }
+  .quote {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
   .rover-img {
     left: 20px; }
   .pink-container #pink-planet {

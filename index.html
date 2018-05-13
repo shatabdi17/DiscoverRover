@@ -5,12 +5,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--Favicons-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/public/assets/DiscoverRoverFavicons/">
+	<link rel="apple-touch-icon" sizes="60x60" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/public/assets/DiscoverRoverFavicons//apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/public/assets/DiscoverRoverFavicons//favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/public/assets/DiscoverRoverFavicons//favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/public/assets/DiscoverRoverFavicons//favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/public/assets/DiscoverRoverFavicons//android-chrome-192x192.png" sizes="192x192">
+	<meta name="msapplication-square70x70logo" content="/smalltile.png" />
+	<meta name="msapplication-square150x150logo" content="/mediumtile.png" />
+	<meta name="msapplication-wide310x150logo" content="/widetile.png" />
+	<meta name="msapplication-square310x310logo" content="/largetile.png" />
+
 
 	<title>Discover Rover</title>
 	<!--Load animate.css-->
 	<link rel="stylesheet" href="/public/styles/animate.css">
-	<!--Load AOS.css-->
-	<link rel="stylesheet" href="/public/styles/aos.css">
 	<!--Load google fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
 	<!--Link to stylesheet-->
@@ -22,6 +39,7 @@
 		<section class="intro-container">
 			<form action="">
 				<label for="chooseRover">Welcome to Mars!</label>
+				<p>Click on the Rover to take photos of Mars.</p>
 				<div id="charge">
   					<pre>{"charged":"100%"}</pre> </div>
 				<select class="rover-selection-container" name="chooseRover" id="chooseRover">
@@ -34,27 +52,41 @@
 		</section>
 	</header>
 	<main class="main-container">
-			<div class="planets pink-container">
-				<img id="pink-planet" src="/public/assets/pink-planet.svg" alt="pink planet">
-			</div>
-			<div class="planets green-container">
-				<img id="green-planet" src="/public/assets/green-planet.svg" alt="green planet">
-			</div>
-			<div class="planets red-container">
-				<img id="red-planet" src="/public/assets/planet.svg" alt="red planet">
-			</div>
-			<div class="planets yellow-container">
-				<img id="yellow-planet" src="/public/assets/yellow-planet.svg" alt="yellow planet">
-			</div>
+		<div class="planets stars">
+			<img id="coloured-stars" src="public/assets/coloured-stars.svg" alt="coloured stars">
+		</div>
+		<div class="planets pink-container">
+			<img id="pink-planet" src="/public/assets/pink-planet.svg" alt="pink planet">
+		</div>
+		<div class="planets red-container">
+			<img id="red-planet" src="/public/assets/planet.svg" alt="red planet">
+		</div>
+		<div class="planets yellow-container">
+			<img id="yellow-planet" src="/public/assets/yellow-planet.svg" alt="yellow planet">
+		</div>
+		<div class="planets milky-way-container">
+			<img id="yellow-planet" src="/public/assets/milky-way.svg" alt="milky way">
+		</div>
+		<div class="planets green-container">
+			<img id="green-planet" src="/public/assets/green-planet.svg" alt="green planet">
+		</div>
+		<div class="astronaut">
+			<div class="quote hidden"></div>
+			<img src="public/assets/astronaut.svg" alt="astronaut">
+		</div>
 		<div class="sand">
 		</div>
 		<div class="rover">
 			<img class="rover-img" src="public/assets/rover.png" alt=""></div>
+    
 		<div class="nasa-image-container hide">
 		<div class="nasa-image ">
 		</div>
 		</div>
 		<div class="quote hidden"></div>
+
+	
+
     
 		<!-- <div class="social-btn">
 			 twitter 

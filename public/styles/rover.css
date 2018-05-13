@@ -146,21 +146,23 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   opacity: 1; }
 
 *:focus {
-  outline: coral; }
+  outline: none; }
 
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 62.5%;
   width: 100%;
   height: 100%;
-  background: #000080; }
+  background: #000080;
+  -webkit-animation: bgColor 60s ease-out infinite;
+          animation: bgColor 60s ease-out infinite; }
   html body {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 1px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#c76e00), to(#000080));
-    background: linear-gradient(#c76e00, #000080); }
+    background: -webkit-gradient(linear, left top, left bottom, from(#4f0a28), to(rgba(0, 0, 127, 0.2)));
+    background: linear-gradient(#4f0a28, rgba(0, 0, 127, 0.2)); }
 
 canvas {
   width: 100vw;
@@ -170,9 +172,10 @@ canvas {
   left: 0; }
 
 .intro-container {
-  background: url(/public/assets/sunset-cropped.jpg);
+  background: url(/public/assets/sunset-cropped.jpg) no-repeat center center fixed;
+  background-size: cover;
   position: fixed;
-  z-index: 9000;
+  z-index: 7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -203,6 +206,13 @@ form {
     display: block;
     text-transform: uppercase;
     word-spacing: 4px; }
+  form p {
+    font-size: 40px;
+    font-size: 4rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 400;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1; }
   form .rover-selection-container {
     font-size: 20px;
     font-size: 2rem;
@@ -230,17 +240,25 @@ form {
   .planets img {
     position: absolute; }
 
+.stars {
+  width: 101vw; }
+  .stars #pink-planet {
+    width: 100%;
+    height: 100%; }
+
 .pink-container {
-  width: 105vw; }
+  width: 102vw; }
   .pink-container #pink-planet {
     width: 300px;
     top: 45%;
     left: 8%;
     -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg); }
+            transform: rotate(-20deg);
+    -webkit-animation: tiltLeft 10s linear infinite;
+            animation: tiltLeft 10s linear infinite; }
 
 .green-container {
-  width: 101vw; }
+  width: 105vw; }
   .green-container #green-planet {
     width: 500px;
     left: 50%;
@@ -252,15 +270,36 @@ form {
   width: 110vw; }
   .red-container #red-planet {
     width: 150px;
-    top: 15%;
-    left: 25%; }
+    top: 25%;
+    left: 55%;
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+    -webkit-animation: tiltRight 18s linear infinite;
+            animation: tiltRight 18s linear infinite; }
 
 .yellow-container {
-  width: 103vw; }
+  width: 106vw; }
   .yellow-container #yellow-planet {
-    width: 350px;
+    width: 270px;
     right: 5%;
-    top: 8%; }
+    top: 8%;
+    -webkit-transform: rotate3d(1, 0.4, 1, -20deg);
+            transform: rotate3d(1, 0.4, 1, -20deg);
+    -webkit-animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+            animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite; }
+
+
+.milky-way-container {
+  width: 101vw; }
+  .milky-way-container #yellow-planet {
+    width: 280px;
+    left: 25%;
+    top: 8%;
+    -webkit-transform: skew(20, 20);
+            transform: skew(20, 20);
+    -webkit-animation: rotateClockwise 30s ease-in-out infinite;
+            animation: rotateClockwise 30s ease-in-out infinite; }
+
 
 .sand {
   position: fixed;
@@ -272,8 +311,20 @@ form {
   height: 239px;
   width: 20000px;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
   bottom: 0; }
+
+.astronaut {
+  position: fixed;
+  width: 70px;
+  bottom: 260px;
+  right: 25%;
+  -webkit-transform: rotate(22deg);
+          transform: rotate(22deg);
+  z-index: 2; }
+  .astronaut img {
+    -webkit-animation: popup 7s ease-in-out infinite;
+            animation: popup 7s ease-in-out infinite; }
 
 .rover-img {
   position: fixed;
@@ -281,7 +332,135 @@ form {
   height: auto;
   left: 100px;
   bottom: 57px;
-  z-index: 3; }
+  z-index: 4; }
+
+@-webkit-keyframes bgColor {
+  0% {
+    background-color: #a12758; }
+  25% {
+    background-color: #000080; }
+  50% {
+    background-color: #44146f; }
+  100% {
+    background-color: #a12758; } }
+
+@keyframes bgColor {
+  0% {
+    background-color: #a12758; }
+  25% {
+    background-color: #000080; }
+  50% {
+    background-color: #44146f; }
+  100% {
+    background-color: #a12758; } }
+
+@-webkit-keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes fullRotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@-webkit-keyframes tiltRight {
+  0% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); } }
+
+@keyframes tiltRight {
+  0% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg); }
+  50% {
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg); } }
+
+@-webkit-keyframes tiltLeft {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg); }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg); } }
+
+@keyframes tiltLeft {
+  0% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg); }
+  50% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg); } }
+
+@-webkit-keyframes rotateClockwise {
+  0% {
+    -webkit-transform: rotate3d(20, 20, 1, 20deg);
+            transform: rotate3d(20, 20, 1, 20deg); }
+  50% {
+    -webkit-transform: rotate3d(20, 20, 1, 70deg);
+            transform: rotate3d(20, 20, 1, 70deg); }
+  100% {
+    -webkit-transform: rotate3d(20, 20, 1, 20deg);
+            transform: rotate3d(20, 20, 1, 20deg); } }
+
+@keyframes rotateClockwise {
+  0% {
+    -webkit-transform: rotate3d(20, 20, 1, 20deg);
+            transform: rotate3d(20, 20, 1, 20deg); }
+  50% {
+    -webkit-transform: rotate3d(20, 20, 1, 70deg);
+            transform: rotate3d(20, 20, 1, 70deg); }
+  100% {
+    -webkit-transform: rotate3d(20, 20, 1, 20deg);
+            transform: rotate3d(20, 20, 1, 20deg); } }
+
+@-webkit-keyframes rotateCounterClockwise {
+  0% {
+    -webkit-transform: rotate3d(1, 0.4, 1, -20deg);
+            transform: rotate3d(1, 0.4, 1, -20deg); }
+  50% {
+    -webkit-transform: rotate3d(1, 0.4, 1, 70deg);
+            transform: rotate3d(1, 0.4, 1, 70deg); } }
+
+@keyframes rotateCounterClockwise {
+  0% {
+    -webkit-transform: rotate3d(1, 0.4, 1, -20deg);
+            transform: rotate3d(1, 0.4, 1, -20deg); }
+  50% {
+    -webkit-transform: rotate3d(1, 0.4, 1, 70deg);
+            transform: rotate3d(1, 0.4, 1, 70deg); } }
+
+@-webkit-keyframes popup {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
+
+@keyframes popup {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
 .nasa-image-container {
   width: 100%;
@@ -293,13 +472,14 @@ form {
   width: 800px;
   height: 700px;
   position: relative;
-  z-index: 5;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: 12px solid #FFF;
   border-radius: 7px; }
+  z-index: 6; }
+
 
 .nasa-image > img {
   margin: auto;
@@ -313,7 +493,7 @@ form {
   position: absolute;
   right: -25px;
   top: -29px;
-  z-index: 9999999;
+  z-index: 9999999; 
   background: #FFF;
   width: 40px;
   height: 40px;
@@ -325,13 +505,15 @@ form {
   width: 400px;
   height: auto;
   position: fixed;
-  top: 250px;
+  bottom: 100px;
+  left: -247px;
   color: #3A3A3A;
   background: rgba(247, 253, 255, 0.85);
-  left: 400px;
   border-radius: 7px;
   padding: 20px;
-  z-index: 4; }
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
+  z-index: 5; }
   .quote q {
     font-size: 25px; }
   .quote p {
@@ -346,3 +528,35 @@ form {
   border-right: 20px solid transparent;
   position: fixed;
   margin-top: 20px; }
+
+@media screen and (max-width: 1000px) {
+  .stars {
+    display: none; }
+  .pink-container #pink-planet {
+    left: 2%; }
+  .green-container {
+    display: none; }
+  .yellow-container {
+    display: none; }
+  .red-container #red-planet {
+    width: 150px;
+    top: 50%;
+    left: 65%; } }
+
+@media screen and (max-width: 450px) {
+  .rover-img {
+    left: 20px; }
+  .pink-container #pink-planet {
+    left: 2%;
+    width: 98px; }
+  .red-container #red-planet {
+    width: 60px; }
+  .milky-way-container {
+    width: 101vw; }
+    .milky-way-container #yellow-planet {
+      width: 150px; }
+  .astronaut {
+    bottom: 350px; }
+  .quote {
+    width: 300px;
+    bottom: 100px; } }

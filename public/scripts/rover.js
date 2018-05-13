@@ -5,7 +5,7 @@ var rover = {};
 rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
 
 //----------
-//API Calls
+// API Calls
 //----------
 rover.getNasa = function () {
     $.ajax({
@@ -40,25 +40,11 @@ rover.getQuote = function () {
     });
 };
 
-//-------
-// intro
-//-------
-rover.introSubmit = function () {
-    var intro = $('.intro-container');
-    var main = $('.main-container');
-    main.hide();
-    $('#chooseRover').on('change', function () {
-        rover.roverChoice = $(this).val();
-        intro.hide();
-        main.show();
-    });
-};
-
 //---------------
-//parallax effect
+// Parallax effect
 //---------------
 rover.scroll = function () {
-    $.jInvertScroll(['.sand', '.pink-container', '.green-container', '.red-container', '.yellow-container', '#myCanvas']);
+    $.jInvertScroll(['.sand', '.pink-container', '.green-container', '.red-container', '.yellow-container', '.milky-way-container', '.stars', '#myCanvas']);
 };
 
 //random number generator 
@@ -67,7 +53,7 @@ rover.randomNum = function (max) {
 };
 
 //------
-//Quote
+// Quote
 //------
 rover.displayQuote = function (quote) {
     var quoteText = quote.quoteText;
@@ -75,7 +61,6 @@ rover.displayQuote = function (quote) {
     var quoteContainer = $('.quote');
     quoteContainer.empty();
     quoteContainer.append('<q>' + quoteText + '</q> \n                        <p>' + quoteAuthor + '</p>');
-    console.log(quoteText, quoteAuthor);
 };
 
 rover.quoteDisplayTimer = function () {
@@ -131,6 +116,29 @@ rover.charge = function () {
             el.innerHTML = JSON.stringify(obj);
         }
     });
+};
+
+rover.chooseRover = function () {
+    var roverImg = $('.rover-img');
+    if (rover.roverChoice === 'curiosity') {
+        roverImg.attr('src', 'public/assets/rover.png');
+    } else if (rover.roverChoice === 'opportunity') {
+        roverImg.attr('src', 'public/assets/opportunity.svg');
+    } else {
+        roverImg.attr('src', 'public/assets/spirit.svg');
+    };
+};
+
+rover.introSubmit = function () {
+    var intro = $('.intro-container');
+    var main = $('.main-container');
+    $('#chooseRover').on('change', function () {
+        rover.roverChoice = $(this).val();
+        rover.chooseRover();
+        intro.hide();
+        main.show();
+    });
+    main.hide();
 };
 
 rover.init = function () {

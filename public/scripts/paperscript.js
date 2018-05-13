@@ -4,13 +4,13 @@
 // Space
 //--------
 
-// The amount of symbol we want to place;
-var count = 150;
+// The amount of symbols on screen
+var count = 300;
 
-// Creating a circle to be replicated later:
+// template for circle 
 var path = new Path.Circle({
     center: new Point(0, 0),
-    radius: 5,
+    radius: 3,
     fillColor: 'rgba(241, 239, 239, 0.74)',
     strokeColor: 'rgba(233, 231, 231, 0.4)'
 });
@@ -38,7 +38,7 @@ var vector = new Point({
 var mouseVector = vector.clone();
 
 function onMouseMove(event) {
-    mouseVector = (view.center - event.point) / 30;
+    mouseVector = (view.center - event.point) / 50;
 }
 
 // The onFrame function for animation

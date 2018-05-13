@@ -288,7 +288,6 @@ form {
     -webkit-animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite;
             animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite; }
 
-
 .milky-way-container {
   width: 101vw; }
   .milky-way-container #yellow-planet {
@@ -299,7 +298,6 @@ form {
             transform: skew(20, 20);
     -webkit-animation: rotateClockwise 30s ease-in-out infinite;
             animation: rotateClockwise 30s ease-in-out infinite; }
-
 
 .sand {
   position: fixed;
@@ -472,14 +470,13 @@ form {
   width: 800px;
   height: 700px;
   position: relative;
+  z-index: 6;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: 12px solid #FFF;
   border-radius: 7px; }
-  z-index: 6; }
-
 
 .nasa-image > img {
   margin: auto;
@@ -493,7 +490,7 @@ form {
   position: absolute;
   right: -25px;
   top: -29px;
-  z-index: 9999999; 
+  z-index: 9999999;
   background: #FFF;
   width: 40px;
   height: 40px;

@@ -189,7 +189,7 @@ canvas {
   width: 100%; }
 
 .credit {
-  margin-top: 350px;
+  bottom: 20px;
   text-align: center;
   font-size: 12px;
   position: absolute;
@@ -233,7 +233,11 @@ form {
     width: 200px;
     height: 40px;
     background: rgba(247, 253, 255, 0.85);
-    border: 2px solid transparent; }
+    border: 2px solid transparent;
+    border-radius: 7px;
+    -moz-user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none; }
   form .rover-selection-container:hover {
     border: 2px solid #FFF;
     -webkit-box-shadow: 0 0 15px #FFF;

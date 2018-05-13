@@ -64,16 +64,7 @@ canvas{
     width: 100%; 
 }
 .credit {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    bottom:20px;
-   //margin-top: 350px;
-=======
    bottom: 20px;
->>>>>>> 0b9bcc916f70b16b7ac5bf41d7efb43c99efb13c
-=======
-    bottom:20px;   
->>>>>>> fdf47d8fb5910e5dea20be653d418f93d464dbb8
    text-align: center;
    font-size: 12px;
    position: absolute;
@@ -108,8 +99,7 @@ form{
             border-radius: 7px;
             -webkit-appearance: none;
             -moz-appearance: none;
-            -o-appearance: none;
-            -moz-user-select: none;
+            -moz-user-select:none;
             padding: 2px 8px;
         }
         .fa-sort-down{
@@ -128,15 +118,8 @@ form{
     height: 40px;
     background: $backgroundTransparent;
     border: 2px solid transparent;
-    border-radius: 7px;
-    -moz-user-select: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
  }
-    // .fa-sort-down {
-    //     color: black;
-    //     font-size: 12px;
-    // }
+    
 
     .rover-selection-container:hover{
         border: 2px solid $white;
@@ -433,6 +416,10 @@ form{
             left: 65%;
         }
     }
+    .nasa-image {
+        width: 600px;
+        height: 500px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -469,4 +456,8 @@ form{
     bottom: 100px;
     }
 
+    .nasa-image {
+        width: 400px;
+        height: 300px;
+    }
 }

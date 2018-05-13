@@ -24,8 +24,9 @@
 	<meta name="msapplication-wide310x150logo" content="/widetile.png" />
 	<meta name="msapplication-square310x310logo" content="/largetile.png" />
 
-
 	<title>Discover Rover</title>
+	<!--Loading Font Awesome-->
+	<script defer src='https://use.fontawesome.com/releases/v5.0.9/js/all.js' integrity='sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl' crossorigin='anonymous'></script>
 	<!--Load animate.css-->
 	<link rel="stylesheet" href="/public/styles/animate.css">
 	<!--Load google fonts-->
@@ -41,13 +42,16 @@
 				<label for="chooseRover">Welcome to Mars!</label>
 				<p>Click on the Rover to take photos of Mars.</p>
 				<div id="charge">
-  					<pre>{"charged":"100%"}</pre> </div>
-				<select class="rover-selection-container" name="chooseRover" id="chooseRover">
-					<option value="curiosity">Select Your Rover</option>
-					<option value="curiosity">Curiosity</option>
-					<option value="opportunity">Opportunity</option>
-					<option value="spirit">Spirit</option>
-				</select>
+					  <pre>{"charged":"100%"}</pre> </div>
+				<div class="select-container">
+					<select class="rover-selection-container" name="chooseRover" id="chooseRover">
+						<option value="curiosity">Select Your Rover</option>
+						<option value="curiosity">Curiosity</option>
+						<option value="opportunity">Opportunity</option>
+						<option value="spirit">Spirit</option>
+					</select>
+					<i class="fas fa-sort-down"></i>
+				</div>
 			</form>
 			<!-- credits -->
 			<div class="credit">Icons made by
@@ -84,10 +88,10 @@
 			<img class="rover-img" src="public/assets/rover.png" alt=""></div>
     
 		<div class="nasa-image-container hide">
-		<div class="nasa-image "></div>
+			<div class="nasa-image "></div>
 		</div>
     
-		<div class="social-btn">
+		<!-- <div class="social-btn">
 			<a id="twitter" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Journey to Mars and go on an adventure with the Mar Rovers!"
 			data-hashtags="Discover Rover" data-related="melodyyunc, shatabdi_nb,hackeryou" data-show-count="false"></a>
 			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -97,7 +101,7 @@
 				<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
 				 class="fb-xfbml-parse-ignore">Share</a>
 			</div>
-		</div>
+		</div> -->
 		
 	</main>
 	<canvas id="myCanvas" resize></canvas>

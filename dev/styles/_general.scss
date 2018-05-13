@@ -63,17 +63,9 @@ canvas{
     height:100vh;
     width: 100%; 
 }
+
 .credit {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    bottom:20px;
-   //margin-top: 350px;
-=======
    bottom: 20px;
->>>>>>> 0b9bcc916f70b16b7ac5bf41d7efb43c99efb13c
-=======
-    bottom:20px;   
->>>>>>> fdf47d8fb5910e5dea20be653d418f93d464dbb8
    text-align: center;
    font-size: 12px;
    position: absolute;
@@ -82,9 +74,7 @@ canvas{
     text-decoration: none;    
     color: rgb(197, 17, 182);
    }
-   
 }
-
 
 #charge{
     @include fontSizer(25);
@@ -100,6 +90,7 @@ form{
         text-transform: uppercase;
         word-spacing: 4px;
     }
+
     .select-container{
         position: relative;
         width: 200px;
@@ -119,9 +110,11 @@ form{
             top: 2px;
         }
     }
+
     p{
         @include font(40, 400);
     }
+
     .rover-selection-container {
     @include font(20, 400);
     width: 200px;
@@ -132,11 +125,7 @@ form{
     -moz-user-select: none;
     -moz-appearance: none;
     -webkit-appearance: none;
- }
-    // .fa-sort-down {
-    //     color: black;
-    //     font-size: 12px;
-    // }
+    }
 
     .rover-selection-container:hover{
         border: 2px solid $white;
@@ -436,6 +425,37 @@ form{
 }
 
 @media screen and (max-width: 450px) {
+    .intro-container {
+    background: url(/public/assets/mobileBG.jpg) no-repeat center center fixed;
+    background-size: cover;
+    }
+
+    .credit {
+    color: $darkBlue;
+    a {  
+        color: $darkBlue;
+        }
+    }
+
+    #charge{
+    @include fontSizer(25);
+    color: $white;
+    }
+
+    form{
+        text-align: center;
+        label {
+            @include font(60, 700);
+            color: $white;
+            display: block;
+            text-transform: uppercase;
+            word-spacing: 4px;
+        }
+        p{
+        color: $white;
+        }
+    }
+
     .rover-img{
         left: 20px;
     }

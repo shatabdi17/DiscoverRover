@@ -64,7 +64,7 @@ canvas{
     width: 100%; 
 }
 .credit {
-   margin-top: 350px;
+   bottom: 20px;
    text-align: center;
    font-size: 12px;
    position: absolute;
@@ -90,6 +90,25 @@ form{
         display: block;
         text-transform: uppercase;
         word-spacing: 4px;
+    }
+    .select-container{
+        position: relative;
+        width: 200px;
+        margin: 0 auto;
+        select{
+            border-radius: 7px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            -moz-user-select: none;
+            padding: 2px 8px;
+        }
+        .fa-sort-down{
+            font-size: 25px;
+            position: absolute;
+            right: 3px;
+            top: 2px;
+        }
     }
     p{
         @include font(40, 400);
@@ -284,6 +303,7 @@ form{
     left: 50%;
     transform: translateX(-50%);
     z-index: $quotes;
+    width: 200px;
     #twitter{
         background: $purple;
     }

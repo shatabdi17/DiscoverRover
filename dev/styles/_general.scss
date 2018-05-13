@@ -105,7 +105,7 @@ form{
         .fa-sort-down{
             font-size: 25px;
             position: absolute;
-            right: 3px;
+            right: 5px;
             top: 2px;
         }
     }
@@ -120,7 +120,7 @@ form{
     height: 40px;
     background: $backgroundTransparent;
     border: 2px solid transparent;
- }
+    }
     
 
     border-radius: 7px;
@@ -139,7 +139,6 @@ form{
         border: 2px solid $white;
         box-shadow: 0 0 15px $white;
     }
-}
 
 //------------
 // Background
@@ -214,6 +213,20 @@ form{
         //transform: rotate3d(20, 20, 1, 20deg);
         animation: rotateClockwise 30s ease-in-out infinite;
         // animation: fullRotation 20s linear infinite;
+    }
+}
+
+.rocket{
+    position: relative;
+    width: 100%;
+    z-index: $astronaut;
+    height: 100vh;
+    #rocket{
+        position: absolute;
+        transform: rotate(40deg);
+        width: 130px;
+        left: 20%;
+        bottom: 0px;
     }
 }
 
@@ -433,8 +446,9 @@ form{
 
 @media screen and (max-width: 450px) {
     .intro-container {
-    background: url(/public/assets/mobileBG.jpg) no-repeat center center fixed;
-    background-size: cover;
+    // background: url(/public/assets/mobileBG.jpg) no-repeat center center fixed;
+    background: $purple;
+    background-size: auto;
     }
 
     .credit {
@@ -461,6 +475,12 @@ form{
         p{
         color: $white;
         }
+    }
+
+    .quote{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
     }
 
     .rover-img{

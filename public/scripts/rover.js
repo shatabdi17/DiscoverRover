@@ -3,6 +3,11 @@
 var rover = {};
 
 rover.roverApiKey = 'lcjdv0yXDikxF5uomOk79VCAgZ1lt1XtEGLxIFmC';
+//rover.introMusic = new Audio('../audio/intro.mp3');
+//rover.bgMusic = new Audio('space.mp3');
+// rover.bgMusic = new Howl({
+//     src: ['space.mp3']
+// });
 
 //----------
 // API Calls
@@ -135,6 +140,7 @@ rover.introSubmit = function () {
     $('#chooseRover').on('change', function () {
         rover.roverChoice = $(this).val();
         rover.chooseRover();
+        //rover.bgMusic.play();
         intro.hide();
         main.show();
     });

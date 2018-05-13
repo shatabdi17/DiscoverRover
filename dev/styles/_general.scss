@@ -100,8 +100,6 @@ form{
     }
 }
 
-
-
 //------------
 // Background
 //------------
@@ -264,10 +262,16 @@ form{
     50% {transform: translateY(20px);}
 }
 
-//------------------------------------
-//styling radio buttons and img labels
-//------------------------------------
-
+//-----------------------------
+//styling social media buttons
+//-----------------------------
+.social-btn{
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: $quotes;
+}
 
 //-----------
 // Nasa-image
@@ -277,7 +281,7 @@ form{
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 999999;
+    z-index: $nasaImgs;
     
 }
 .nasa-image {

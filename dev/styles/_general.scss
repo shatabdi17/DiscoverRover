@@ -64,7 +64,7 @@ canvas{
     width: 100%; 
 }
 .credit {
-   bottom: 20px;
+    bottom:20px;   
    text-align: center;
    font-size: 12px;
    position: absolute;
@@ -119,8 +119,16 @@ form{
     height: 40px;
     background: $backgroundTransparent;
     border: 2px solid transparent;
-    }
-    
+    border-radius: 7px;
+    -moz-user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+ }
+    // .fa-sort-down {
+    //     color: black;
+    //     font-size: 12px;
+    // }
+
     .rover-selection-container:hover{
         border: 2px solid $white;
         box-shadow: 0 0 15px $white;

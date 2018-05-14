@@ -196,21 +196,19 @@ form{
         width: 270px;
         right: 5%;
         top: 8%;
-        transform: rotate3d(1, 0.4, 1, -20deg);
-        animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+        transform: rotate(12deg);
+        animation: tiltLeft 18s linear infinite;
     }
 }
 
 .milky-way-container{
     width: 101vw;
-    #yellow-planet{
+    #milky-way{
         width: 280px;
         left: 15%;
         top: 5%;
         transform: skew(20,20);
-        //transform: rotate3d(20, 20, 1, 20deg);
         animation: rotateClockwise 30s ease-in-out infinite;
-        // animation: fullRotation 20s linear infinite;
     }
 }
 
@@ -286,9 +284,9 @@ form{
 }
 
 @keyframes fullRotation{
-    0% {transform: rotate(0deg)}
-    50% {transform: rotate(180deg)}
-    100% {transform: rotate(0deg)}
+    0% {transform: rotate(0deg), translate3d(20deg, 10deg)}
+    50% {transform: rotate(180deg), translate3d(20deg, 10deg)}
+    100% {transform: rotate(360deg), translate3d(20deg, 10deg)}
 }
 @keyframes tiltRight{
     0% {transform: rotate(12deg)}
@@ -301,7 +299,7 @@ form{
 }
 @keyframes rotateClockwise {
     0%   {transform: rotate3d(20, 20, 1, 20deg);}
-    50%  {transform: rotate3d(20, 20, 1, 70deg);}
+    50%  {transform: rotate3d(20, 20, 1, 50deg);}
     100%  {transform: rotate3d(20, 20, 1, 20deg);}
 }
 
@@ -501,7 +499,7 @@ form{
 
     .milky-way-container{
     width: 101vw;
-    #yellow-planet{
+    #milky-way{
         width: 150px;
         }
     }

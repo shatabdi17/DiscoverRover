@@ -314,8 +314,8 @@ form {
     width: 270px;
     right: 5%;
     top: 8%;
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
     -webkit-animation: tiltLeft 18s linear infinite;
             animation: tiltLeft 18s linear infinite; }
 
@@ -516,14 +516,14 @@ form {
     background: #44146f; }
 
 .nasa-image-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: 6; }
 
 .nasa-image {
-  width: 800px;
-  height: 700px;
+  width: 80%;
+  height: 70%;
   position: relative;
   z-index: 6;
   top: 50%;

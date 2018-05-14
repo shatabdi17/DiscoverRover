@@ -198,6 +198,17 @@ canvas {
     text-decoration: none;
     color: #c511b6; }
 
+.copyright {
+  bottom: 40px;
+  color: #f04ce2;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  word-spacing: 3px; }
+
 #charge {
   font-size: 25px;
   font-size: 2.5rem;
@@ -603,9 +614,11 @@ form {
     background: #44146f;
     background-size: auto; }
   .credit {
-    color: #000080; }
+    color: #FFF; }
     .credit a {
-      color: #000080; }
+      color: #FFF; }
+  .copyright {
+    color: #FFF; }
   #charge {
     font-size: 25px;
     font-size: 2.5rem;

@@ -215,15 +215,15 @@ form{
 //fix this
 .rocket{
     width: 100%;
-    z-index: $rover;
-    height: 150px;
+    z-index: $astronaut;
+    height: 100px;
     position: relative;
     #rocket{
         position: absolute;
         transform: rotate(40deg);
         width: 130px;
         left: 20%;
-        bottom: 0px;
+        bottom: -100vh;
     }
 }
 

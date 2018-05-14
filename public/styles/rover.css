@@ -332,8 +332,8 @@ form {
 
 .rocket {
   width: 100%;
-  z-index: 4;
-  height: 150px;
+  z-index: 2;
+  height: 100px;
   position: relative; }
   .rocket #rocket {
     position: absolute;
@@ -341,7 +341,7 @@ form {
             transform: rotate(40deg);
     width: 130px;
     left: 20%;
-    bottom: 0px; }
+    bottom: -100vh; }
 
 .sand {
   position: fixed;

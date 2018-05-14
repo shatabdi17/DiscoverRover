@@ -521,6 +521,20 @@ form{
     }
 }
 
+@media screen and (max-width: 414px) {
+    .nasa-image {
+        width: 350px;
+        height: 300px;
+    }
+    .close-button {
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+        right: 12px;
+        top: 10px;
+    }
+}
+
 @media screen and (max-width: 320px) {
      .nasa-image {
          width: 300px;

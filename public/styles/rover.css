@@ -172,7 +172,7 @@ canvas {
   left: 0; }
 
 .intro-container {
-  background: url(/public/assets/sunset-cropped.jpg) no-repeat center center fixed;
+  background: url("../assets/sunset-cropped.jpg") no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   z-index: 7;
@@ -325,8 +325,8 @@ form {
     width: 270px;
     right: 5%;
     top: 8%;
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
     -webkit-animation: tiltLeft 18s linear infinite;
             animation: tiltLeft 18s linear infinite; }
 
@@ -343,16 +343,16 @@ form {
 
 .rocket {
   width: 100%;
-  z-index: 4;
-  height: 150px;
+  z-index: 2;
+  height: 100px;
   position: relative; }
   .rocket #rocket {
     position: absolute;
     -webkit-transform: rotate(40deg);
             transform: rotate(40deg);
     width: 130px;
-    left: 20%;
-    bottom: 0px; }
+    left: 40%;
+    bottom: -100vh; }
 
 .sand {
   position: fixed;
@@ -527,14 +527,14 @@ form {
     background: #44146f; }
 
 .nasa-image-container {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   z-index: 6; }
 
 .nasa-image {
-  width: 800px;
-  height: 700px;
+  max-width: 800px;
+  height: 90%;
   position: relative;
   z-index: 6;
   top: 50%;

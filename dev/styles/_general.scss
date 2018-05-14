@@ -69,11 +69,21 @@ canvas{
    text-align: center;
    font-size: 12px;
    position: absolute;
-   color: rgb(197, 17, 182);
+   color: $pink;
    a {
     text-decoration: none;    
-    color: rgb(197, 17, 182);
+    color: $pink;
    }
+}
+.copyright {
+    bottom: 40px;
+    color: lighten($pink, 20%);
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    word-spacing: 3px;
 }
 
 #charge{
@@ -449,10 +459,14 @@ form{
     }
 
     .credit {
-    color: $darkBlue;
+    color: $white;
     a {  
-        color: $darkBlue;
+        color: $white;
         }
+    }
+
+    .copyright {
+        color: $white;
     }
 
     #charge{

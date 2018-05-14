@@ -53,7 +53,7 @@ canvas{
 // Intro page
 //-----------
 .intro-container {
-    background: url(/public/assets/sunset-cropped.jpg) no-repeat center center fixed;
+    background: url('../assets/sunset-cropped.jpg') no-repeat center center fixed;
     background-size: cover;
     position: fixed;
     z-index: $intro;

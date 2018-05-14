@@ -172,7 +172,7 @@ canvas {
   left: 0; }
 
 .intro-container {
-  background: url(/public/assets/sunset-cropped.jpg) no-repeat center center fixed;
+  background: url("../assets/sunset-cropped.jpg") no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   z-index: 7;

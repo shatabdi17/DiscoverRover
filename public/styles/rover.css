@@ -314,14 +314,14 @@ form {
     width: 270px;
     right: 5%;
     top: 8%;
-    -webkit-transform: rotate3d(1, 0.4, 1, -20deg);
-            transform: rotate3d(1, 0.4, 1, -20deg);
-    -webkit-animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite;
-            animation: rotateCounterClockwise 48s cubic-bezier(0.19, 1, 0.22, 1) infinite; }
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+    -webkit-animation: tiltLeft 18s linear infinite;
+            animation: tiltLeft 18s linear infinite; }
 
 .milky-way-container {
   width: 101vw; }
-  .milky-way-container #yellow-planet {
+  .milky-way-container #milky-way {
     width: 280px;
     left: 15%;
     top: 5%;
@@ -398,25 +398,25 @@ form {
 
 @-webkit-keyframes fullRotation {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg), translate3d(20deg, 10deg);
+            transform: rotate(0deg), translate3d(20deg, 10deg); }
   50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotate(180deg), translate3d(20deg, 10deg);
+            transform: rotate(180deg), translate3d(20deg, 10deg); }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
+    -webkit-transform: rotate(360deg), translate3d(20deg, 10deg);
+            transform: rotate(360deg), translate3d(20deg, 10deg); } }
 
 @keyframes fullRotation {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg), translate3d(20deg, 10deg);
+            transform: rotate(0deg), translate3d(20deg, 10deg); }
   50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    -webkit-transform: rotate(180deg), translate3d(20deg, 10deg);
+            transform: rotate(180deg), translate3d(20deg, 10deg); }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
+    -webkit-transform: rotate(360deg), translate3d(20deg, 10deg);
+            transform: rotate(360deg), translate3d(20deg, 10deg); } }
 
 @-webkit-keyframes tiltRight {
   0% {
@@ -455,8 +455,8 @@ form {
     -webkit-transform: rotate3d(20, 20, 1, 20deg);
             transform: rotate3d(20, 20, 1, 20deg); }
   50% {
-    -webkit-transform: rotate3d(20, 20, 1, 70deg);
-            transform: rotate3d(20, 20, 1, 70deg); }
+    -webkit-transform: rotate3d(20, 20, 1, 50deg);
+            transform: rotate3d(20, 20, 1, 50deg); }
   100% {
     -webkit-transform: rotate3d(20, 20, 1, 20deg);
             transform: rotate3d(20, 20, 1, 20deg); } }
@@ -466,8 +466,8 @@ form {
     -webkit-transform: rotate3d(20, 20, 1, 20deg);
             transform: rotate3d(20, 20, 1, 20deg); }
   50% {
-    -webkit-transform: rotate3d(20, 20, 1, 70deg);
-            transform: rotate3d(20, 20, 1, 70deg); }
+    -webkit-transform: rotate3d(20, 20, 1, 50deg);
+            transform: rotate3d(20, 20, 1, 50deg); }
   100% {
     -webkit-transform: rotate3d(20, 20, 1, 20deg);
             transform: rotate3d(20, 20, 1, 20deg); } }
@@ -638,7 +638,7 @@ form {
     width: 60px; }
   .milky-way-container {
     width: 101vw; }
-    .milky-way-container #yellow-planet {
+    .milky-way-container #milky-way {
       width: 150px; }
   .astronaut {
     bottom: 350px; }
@@ -648,6 +648,17 @@ form {
   .nasa-image {
     width: 400px;
     height: 300px; } }
+
+@media screen and (max-width: 414px) {
+  .nasa-image {
+    width: 350px;
+    height: 300px; }
+  .close-button {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    right: 12px;
+    top: 10px; } }
 
 @media screen and (max-width: 320px) {
   .nasa-image {

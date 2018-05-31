@@ -75,6 +75,7 @@ canvas{
     color: $pink;
    }
 }
+
 .copyright {
     bottom: 40px;
     color: lighten($pink, 20%);
@@ -94,11 +95,17 @@ canvas{
 form{
     text-align: center;
     label {
-        @include font(60, 700);
+        @include font(80, 700);
+        font-family: 'Righteous', cursive;
         color: $black;
         display: block;
         text-transform: uppercase;
         word-spacing: 4px;
+    }
+    p{
+        font-size: 40px;
+        font-weight: 700;
+        color: $black;
     }
 
     .select-container{
@@ -118,10 +125,6 @@ form{
             right: 5px;
             top: 2px;
         }
-    }
-
-    p{
-        @include font(40, 400);
     }
 
     .rover-selection-container {
@@ -532,10 +535,30 @@ form{
         height: 300px;
     }
 }
+@media screen and (max-width: 620px){
+    form{
+        label {
+            @include font(60, 700);
+            font-family: 'Righteous', cursive;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+}
 
-@media screen and (max-width: 414px) {
-
-        .nasa-image {
+@media screen and (max-width: 450px) {
+    form{
+        label {
+            @include font(40, 700);
+            font-family: 'Righteous', cursive;
+            color: $white;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .nasa-image {
         width: 350px;
         height: 300px;
     }

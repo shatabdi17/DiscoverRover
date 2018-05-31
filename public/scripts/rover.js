@@ -124,7 +124,6 @@ rover.charge = function () {
     });
 };
 // anime.js ends
-
 rover.chooseRover = function () {
     var roverImg = $('.rover-img');
     if (rover.roverChoice === 'curiosity') {

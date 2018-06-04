@@ -158,13 +158,14 @@ form{
     position: fixed;
     top: 5%;
     left: 5%;
-    background: $white;
+    background: $darkBlueTransparent2;
+    color: white;
     width: 300px;
     border-radius: 5px;
     font-size: 3rem;
     padding: 2rem;
     z-index: $instruction;
-    box-shadow: 0 3px 2px #777;
+    box-shadow: 0 14px 28px $transparentBlack, 0 10px 10px $transparentBlack;
     p{
         margin: 0;
     }

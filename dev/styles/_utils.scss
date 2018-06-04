@@ -24,8 +24,10 @@ $astronaut: 2;
 $midground: 3;
 $rover: 4;
 $quotes: 5;
-$nasaImgs: 6;
-$intro: 7;
+$loader: 6;
+$nasaImgs: 7;
+$instruction: 8;
+$intro: 9;
 
 //position
 @mixin fixed (){

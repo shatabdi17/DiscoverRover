@@ -175,7 +175,7 @@ canvas {
   background: url("../assets/sunset-cropped.jpg") no-repeat center center fixed;
   background-size: cover;
   position: fixed;
-  z-index: 7;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +272,40 @@ form {
   border: 2px solid #FFF;
   -webkit-box-shadow: 0 0 15px #FFF;
           box-shadow: 0 0 15px #FFF; }
+
+.instructionContainer {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  background: #FFF;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 3rem;
+  padding: 2rem;
+  z-index: 8;
+  -webkit-box-shadow: 0 3px 2px #777;
+          box-shadow: 0 3px 2px #777; }
+  .instructionContainer p {
+    margin: 0; }
+
+.loading {
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 6; }
+
+@-webkit-keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .planets {
   position: fixed;
@@ -528,13 +562,13 @@ form {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 6; }
+  z-index: 7; }
 
 .nasa-image {
   max-width: 800px;
   height: 90%;
   position: relative;
-  z-index: 6;
+  z-index: 7;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

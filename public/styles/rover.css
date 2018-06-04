@@ -175,7 +175,7 @@ canvas {
   background: url("../assets/sunset-cropped.jpg") no-repeat center center fixed;
   background-size: cover;
   position: fixed;
-  z-index: 7;
+  z-index: 9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,16 +217,21 @@ canvas {
 form {
   text-align: center; }
   form label {
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 80px;
+    font-size: 8rem;
     font-family: 'Oxygen', sans-serif;
     font-weight: 700;
     color: #3A3A3A;
     text-shadow: 0 0 1.5rem 1;
+    font-family: 'Righteous', cursive;
     color: #3A3A3A;
     display: block;
     text-transform: uppercase;
     word-spacing: 4px; }
+  form p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #3A3A3A; }
   form .select-container {
     position: relative;
     width: 200px;
@@ -242,13 +247,6 @@ form {
       position: absolute;
       right: 5px;
       top: 2px; }
-  form p {
-    font-size: 40px;
-    font-size: 4rem;
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 400;
-    color: #3A3A3A;
-    text-shadow: 0 0 1.5rem 1; }
   form .rover-selection-container {
     font-size: 20px;
     font-size: 2rem;
@@ -274,6 +272,40 @@ form {
   border: 2px solid #FFF;
   -webkit-box-shadow: 0 0 15px #FFF;
           box-shadow: 0 0 15px #FFF; }
+
+.instructionContainer {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  background: #FFF;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 3rem;
+  padding: 2rem;
+  z-index: 8;
+  -webkit-box-shadow: 0 3px 2px #777;
+          box-shadow: 0 3px 2px #777; }
+  .instructionContainer p {
+    margin: 0; }
+
+.loading {
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 6; }
+
+@-webkit-keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .planets {
   position: fixed;
@@ -530,13 +562,13 @@ form {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 6; }
+  z-index: 7; }
 
 .nasa-image {
   max-width: 800px;
   height: 90%;
   position: relative;
-  z-index: 6;
+  z-index: 7;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -662,7 +694,30 @@ form {
     width: 400px;
     height: 300px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 620px) {
+  form label {
+    font-size: 60px;
+    font-size: 6rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1;
+    font-family: 'Righteous', cursive; }
+  form p {
+    font-size: 30px; } }
+
+@media screen and (max-width: 450px) {
+  form label {
+    font-size: 40px;
+    font-size: 4rem;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    color: #3A3A3A;
+    text-shadow: 0 0 1.5rem 1;
+    font-family: 'Righteous', cursive;
+    color: #FFF; }
+  form p {
+    font-size: 20px; }
   .nasa-image {
     width: 350px;
     height: 300px; }

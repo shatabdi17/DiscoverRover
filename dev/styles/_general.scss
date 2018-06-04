@@ -75,6 +75,7 @@ canvas{
     color: $pink;
    }
 }
+
 .copyright {
     bottom: 40px;
     color: lighten($pink, 20%);
@@ -94,11 +95,17 @@ canvas{
 form{
     text-align: center;
     label {
-        @include font(60, 700);
+        @include font(80, 700);
+        font-family: 'Righteous', cursive;
         color: $black;
         display: block;
         text-transform: uppercase;
         word-spacing: 4px;
+    }
+    p{
+        font-size: 40px;
+        font-weight: 700;
+        color: $black;
     }
 
     .select-container{
@@ -118,10 +125,6 @@ form{
             right: 5px;
             top: 2px;
         }
-    }
-
-    p{
-        @include font(40, 400);
     }
 
     .rover-selection-container {
@@ -151,6 +154,40 @@ form{
 //------------
 // Background
 //------------
+.instructionContainer{
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    background: $white;
+    width: 300px;
+    border-radius: 5px;
+    font-size: 3rem;
+    padding: 2rem;
+    z-index: $instruction;
+    box-shadow: 0 3px 2px #777;
+    p{
+        margin: 0;
+    }
+}
+.loading {
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    // animation: rotation 1s infinite linear;
+    // border: 10px solid rgba(255, 255, 255, 0.2);
+    // border-top-color: rgba(255, 255, 255, 0.7);
+    // border-radius: 50%;
+    z-index: $loader;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .planets{
     position: fixed;
     z-index: $background;
@@ -532,10 +569,30 @@ form{
         height: 300px;
     }
 }
+@media screen and (max-width: 620px){
+    form{
+        label {
+            @include font(60, 700);
+            font-family: 'Righteous', cursive;
+        }
+        p{
+            font-size: 30px;
+        }
+    }
+}
 
-@media screen and (max-width: 414px) {
-
-        .nasa-image {
+@media screen and (max-width: 450px) {
+    form{
+        label {
+            @include font(40, 700);
+            font-family: 'Righteous', cursive;
+            color: $white;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .nasa-image {
         width: 350px;
         height: 300px;
     }

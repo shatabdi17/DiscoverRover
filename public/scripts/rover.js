@@ -25,7 +25,9 @@ rover.getNasa = function () {
         }
     }).then(function (res) {
         console.log(res);
-        rover.displayNasaImg(res.photos);
+        setTimeout(function () {
+            rover.displayNasaImg(res.photos);
+        }, 1000);
     });
 };
 
@@ -93,12 +95,14 @@ rover.displayNasaImg = function (roverImgs) {
 
 rover.eventRoverClick = function () {
     $('.rover-img').on('click', function () {
+        $('.loading').fadeIn();
         rover.getNasa();
     });
 };
 /// event for closing the image from getNasa()
 rover.eventCloseClick = function () {
     rover.imgContainer.on('click', '.close-button', function () {
+        $('.loading').hide();
         rover.imgContainer.addClass('hide');
         rover.imgContainer.removeClass('show');
     });
@@ -124,7 +128,6 @@ rover.charge = function () {
     });
 };
 // anime.js ends
-
 rover.chooseRover = function () {
     var roverImg = $('.rover-img');
     if (rover.roverChoice === 'curiosity') {
@@ -149,6 +152,27 @@ rover.introSubmit = function () {
     main.hide();
 };
 
+rover.canvasResize = function () {
+    window.addEventListener('resize', function () {
+        var height = window.innerHeight;
+        var width = window.innerWidth;
+
+        var canvas = $('#myCanvas');
+        canvas.css({
+            'height': height,
+            'width': width
+        });
+    });
+};
+
+rover.removeInstructions = function () {
+    window.addEventListener('scroll', function () {
+        setTimeout(function () {
+            $('.instructionContainer').fadeOut();
+        }, 1000);
+    });
+};
+
 rover.init = function () {
     //focus on input on load
     var select = $('.rover-selection-container').focus();
@@ -164,6 +188,8 @@ rover.init = function () {
     rover.eventRoverClick();
     //click to close NASA imgs
     rover.eventCloseClick();
+    rover.canvasResize();
+    rover.removeInstructions();
 };
 
 $(rover.init());

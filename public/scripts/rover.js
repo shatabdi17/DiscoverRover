@@ -18,9 +18,9 @@ rover.getNasa = function () {
         method: 'GET',
         dataType: 'json',
         data: {
-            sol: '10',
-            api_key: rover.roverApiKey
-            // page: '1',
+            sol: rover.randomNum(1000),
+            api_key: rover.roverApiKey,
+            page: '1'
             // camera: 'NAVCAM'
         }
     }).then(function (res) {
@@ -86,6 +86,8 @@ rover.directImgContainer = $('.nasa-image');
 
 rover.displayNasaImg = function (roverImgs) {
     var randomIndex = rover.randomNum(roverImgs.length);
+    console.log(randomIndex);
+
     var imgChoice = roverImgs[randomIndex].img_src;
     rover.imgContainer.addClass('show');
     rover.imgContainer.removeClass('hide');

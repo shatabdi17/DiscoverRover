@@ -16,9 +16,9 @@ rover.getNasa = () => {
         method: 'GET',
         dataType: 'json',
         data: {
-            sol: '10',
+            sol: rover.randomNum(1000),
             api_key: rover.roverApiKey,
-            // page: '1',
+            page: '1',
             // camera: 'NAVCAM'
         }
     }).then((res) => {
@@ -84,6 +84,8 @@ rover.directImgContainer = $('.nasa-image');
 
 rover.displayNasaImg = (roverImgs) => {
     let randomIndex = rover.randomNum(roverImgs.length);
+    console.log(randomIndex);
+    
     const imgChoice = roverImgs[randomIndex].img_src;
     rover.imgContainer.addClass('show');
     rover.imgContainer.removeClass('hide');

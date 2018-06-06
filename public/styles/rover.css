@@ -277,14 +277,15 @@ form {
   position: fixed;
   top: 5%;
   left: 5%;
-  background: #FFF;
+  background: rgba(0, 0, 127, 0.8);
+  color: white;
   width: 300px;
   border-radius: 5px;
   font-size: 3rem;
   padding: 2rem;
   z-index: 8;
-  -webkit-box-shadow: 0 3px 2px #777;
-          box-shadow: 0 3px 2px #777; }
+  -webkit-box-shadow: 0 14px 28px rgba(58, 58, 58, 0.2), 0 10px 10px rgba(58, 58, 58, 0.2);
+          box-shadow: 0 14px 28px rgba(58, 58, 58, 0.2), 0 10px 10px rgba(58, 58, 58, 0.2); }
   .instructionContainer p {
     margin: 0; }
 

@@ -81,24 +81,3 @@ $intro: 9;
     margin: $margin;
 }
 
-//grid variables
-
-// $grid-col-3: 1fr 1fr 1fr;
-// $grid-col-1: 1fr;
-
-// unused mix-ins
-// @mixin flex($direction){
-//     display: flex;
-//     flex-direction: $direction; 
-//     flex-wrap: wrap;
-// }
-
-// //mixins grid layout
-// @mixin grid ($column){
-//     display: grid;
-//     grid-template-columns: $column;
-//     grid-gap: 1rem;
-//     grid-auto-rows: minmax(10rem auto);
-//     grid-auto-columns: minmax(10rem 20rem);
-// }
-

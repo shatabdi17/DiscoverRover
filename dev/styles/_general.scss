@@ -176,10 +176,6 @@ form{
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    // animation: rotation 1s infinite linear;
-    // border: 10px solid rgba(255, 255, 255, 0.2);
-    // border-top-color: rgba(255, 255, 255, 0.7);
-    // border-radius: 50%;
     z-index: $loader;
 }
 
@@ -491,7 +487,6 @@ form{
 
 @media screen and (max-width: 450px) {
     .intro-container {
-    // background: url(/public/assets/mobileBG.jpg) no-repeat center center fixed;
     background: $purple;
     background-size: auto;
     }
